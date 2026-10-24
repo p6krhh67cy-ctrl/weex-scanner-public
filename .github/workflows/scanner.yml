@@ -1,26 +1,20 @@
-name: WEEX Scanner
+name: WEEX Scanner Validation
 on:
   push:
-    branches: [main]
-  schedule:
-    - cron: '*/10 * * * *'
+    branches: [migration-v116-work]
   workflow_dispatch:
 permissions:
   contents: read
-concurrency:
-  group: weex-scanner
-  cancel-in-progress: false
 jobs:
   scan:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      ALERTS_ENABLED: "true"
-      SCANNER_STATE_PATH: ${{ github.workspace }}/history/scanner_v2_state.json
+      ALERTS_ENABLED: "false"
+      SCANNER_STATE_PATH: ./history/scanner_v2_state.json
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run scanner pipeline
-        run: python scripts/actions_runner.py
+      - run: python scripts/actions_runner.py
