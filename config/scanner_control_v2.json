@@ -1,0 +1,18 @@
+{
+  "mode": "PRODUCTION",
+  "cadence_minutes": 30,
+  "timezone": "Europe/Warsaw",
+  "window_start": "08:00",
+  "window_end": "22:00",
+  "watch_telegram_mode": "AGGREGATED_UNLIMITED",
+  "watch_message_every_minutes": 30,
+  "turn_monitor_enabled": true,
+  "turn_monitor_minutes": 10,
+  "turn_monitor_max_symbols": 30,
+  "short_alert_mode": "IMMEDIATE_UNLIMITED",
+  "min_forward_reward_pct": 2.5,
+  "repeat_alert_new_cycle": true,
+  "watch_ttl_minutes": 240,
+  "telegram_is_radar_only": true,
+  "full_analysis_trigger": "USER_REQUEST"
+}
