@@ -1,7 +1,7 @@
 name: WEEX Scanner
 on:
   push:
-    branches: [main]
+    branches: [main, migration-v116-work]
   schedule:
     - cron: '*/10 * * * *'
   workflow_dispatch:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      ALERTS_ENABLED: "true"
+      ALERTS_ENABLED: ${{ github.ref == 'refs/heads/main' && 'true' || 'false' }}
       SCANNER_STATE_PATH: ${{ github.workspace }}/history/scanner_v2_state.json
     steps:
       - uses: actions/checkout@v4
