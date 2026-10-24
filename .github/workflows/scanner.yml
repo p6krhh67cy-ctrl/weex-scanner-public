@@ -1,16 +1,21 @@
-name: WEEX Scanner Validation
+name: WEEX Scanner
 on:
   push:
-    branches: [migration-v116-work]
+    branches: [main]
+  schedule:
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: weex-scanner
+  cancel-in-progress: false
 jobs:
   scan:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      ALERTS_ENABLED: "false"
+      ALERTS_ENABLED: "true"
       SCANNER_STATE_PATH: ./history/scanner_v2_state.json
     steps:
       - uses: actions/checkout@v4
