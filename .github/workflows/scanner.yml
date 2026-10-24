@@ -28,6 +28,7 @@ jobs:
       ALERTS_ENABLED: 'true'
       SCANNER_STATE_PATH: ./history/scanner_v2_state.json
       TURN_MONITOR_STATE_PATH: ./history/turn_monitor_state.json
+      TZ: Europe/Warsaw
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,7 +36,26 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Enforce 08:00-22:00 Europe/Warsaw window
+        if: github.event_name == 'schedule'
+        shell: bash
+        run: |
+          HOUR=$(TZ=Europe/Warsaw date +%H)
+          MINUTE=$(TZ=Europe/Warsaw date +%M)
+          NOW=$((10#$HOUR * 60 + 10#$MINUTE))
+          START=$((8 * 60))
+          END=$((22 * 60))
+          if (( NOW < START || NOW > END )); then
+            echo "Outside scanner window 08:00-22:00 Europe/Warsaw; stopping successfully."
+            echo "RUN_SCANNER=false" >> "$GITHUB_ENV"
+          else
+            echo "RUN_SCANNER=true" >> "$GITHUB_ENV"
+          fi
+      - name: Enable non-scheduled runs
+        if: github.event_name != 'schedule'
+        run: echo "RUN_SCANNER=true" >> "$GITHUB_ENV"
       - name: Select scan mode
+        if: env.RUN_SCANNER == 'true'
         shell: bash
         run: |
           if [[ "${{ github.event_name }}" != "schedule" || "${{ github.event.schedule }}" == "3,33 * * * *" ]]; then
@@ -44,8 +64,10 @@ jobs:
             echo "SCANNER_RUN_MODE=monitor" >> "$GITHUB_ENV"
           fi
       - name: Run production scanner
+        if: env.RUN_SCANNER == 'true'
         run: python scripts/actions_runner.py
       - name: Persist WATCH state
+        if: env.RUN_SCANNER == 'true'
         shell: bash
         run: |
           git config user.name 'weex-scanner-bot'
