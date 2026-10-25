@@ -2,6 +2,7 @@
 """Compatibility launcher for scan_market_v2 using current WEEX v3 tickers."""
 import os
 import sys
+import time
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if SCRIPT_DIR not in sys.path:
@@ -25,14 +26,31 @@ def _rows(payload):
     return []
 
 
+def _stable_rows(url, timeout=20, attempts=3):
+    """WEEX list endpoints occasionally return partial universes; union retries by symbol."""
+    merged = {}
+    counts = []
+    for i in range(attempts):
+        rows = _rows(_original_get_json(url, timeout=timeout))
+        counts.append(len(rows))
+        for x in rows:
+            if not isinstance(x, dict):
+                continue
+            sym = str(x.get('symbol', '')).upper()
+            if sym:
+                merged[sym] = x
+        if i + 1 < attempts:
+            time.sleep(0.35)
+    print(f'WEEX_UNIVERSE_RETRIES url={url.rsplit("/",1)[-1]} counts={counts} union={len(merged)}', flush=True)
+    return list(merged.values())
+
+
 def _legacy_tickers_from_v3(timeout=20):
-    stats = _rows(_original_get_json(V3_24H, timeout=timeout))
-    books = _rows(_original_get_json(V3_BOOK, timeout=timeout))
+    stats = _stable_rows(V3_24H, timeout=timeout)
+    books = _stable_rows(V3_BOOK, timeout=timeout)
     book_by_symbol = {str(x.get("symbol", "")).upper(): x for x in books if isinstance(x, dict)}
     out = []
     for x in stats:
-        if not isinstance(x, dict):
-            continue
         sym = str(x.get("symbol", "")).upper()
         if not sym:
             continue
@@ -41,10 +59,6 @@ def _legacy_tickers_from_v3(timeout=20):
             change_fraction = float(x.get("priceChangePercent", 0)) / 100.0
         except Exception:
             change_fraction = 0.0
-        # IMPORTANT: these keys intentionally match scan_market_v2.main()'s
-        # legacy input contract exactly. The previous adapter used output-field
-        # names here, which made volume/bid/ask/change invisible to the scanner
-        # and therefore filtered the whole market out before scoring.
         out.append({
             "symbol": sym,
             "last": x.get("lastPrice"),
