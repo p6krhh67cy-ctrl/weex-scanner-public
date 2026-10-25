@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Telegram radar: concise WATCH and READY-for-analysis notifications."""
 import json,os,time,urllib.parse,urllib.request,urllib.error
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 SRC=Path('snapshots/scanner_v2_radar.json'); OUT=Path('snapshots/scanner_v2_alerts.json'); ARCH=Path('history/scanner-v2-alerts')
 BASE=os.environ.get('RADAR_ALERT_BASE','https://weex-live-market-gateway.c5wkwhzwg4.workers.dev').rstrip('/'); ENABLED=str(os.environ.get('ALERTS_ENABLED','false')).lower() in ('1','true','yes','y')
 def n(v,d=None):
@@ -28,7 +30,14 @@ def aggregate_watch(watches):
         lines.append('\nRETEST')
         for x in retests:lines.append(f"• {x.get('symbol')} | BASE {fmt(x.get('expected_drop_pct'),2)}%")
     lines.append('\nCzekamy na trigger do WEEX ANALIZA.'); return '\n'.join(lines)
+def watch_send_allowed():
+    now=datetime.now(ZoneInfo('Europe/Warsaw'))
+    # WATCH is legal only from the scheduled FULL cycle at :00 or :30.
+    # Keep this guard in the sender itself so stale/duplicate runners cannot leak WATCH alerts.
+    return 8 <= now.hour < 22 and now.minute in (0,30) and now.second < 180 and os.environ.get('SCANNER_EFFECTIVE_MODE')=='full'
 def send(symbol,message,status,x=None,scanner_status=None):
+    if status=='WATCH' and not watch_send_allowed():
+        return {'ok':True,'skipped':True,'reason':'WATCH_BLOCKED_OUTSIDE_FULL_WARSAW_SLOT'}
     params={'action':'radar-alert','contract_version':'3.0','radar_status':status,'scanner_status':scanner_status or str((x or {}).get('cycle_state') or status),'phase':message,'entry_now':'false','analysis_command':f'WEEX ANALIZA {symbol}','warning':'RADAR — pełna analiza przed decyzją.','message':message}
     if x:params.update({'opportunity':fmt(x.get('canonical_opportunity'),1),'technical_score':fmt(x.get('canonical_technical'),1),'confirmations':str(len(sigs(x))),'price':fmt(x.get('price'),8)})
     url=f'{BASE}/trade-watch/{symbol}?'+urllib.parse.urlencode(params); req=urllib.request.Request(url,headers={'Accept':'application/json','Cache-Control':'no-cache','User-Agent':'WEEX-Radar-V5/1.0'})
@@ -42,7 +51,7 @@ def send(symbol,message,status,x=None,scanner_status=None):
 def main():
     src=json.loads(SRC.read_text(encoding='utf-8')); ready=(src.get('short_setup_candidates') or [])+(src.get('short_setup_overflow') or []); watches=(src.get('pump_watch_candidates') or [])+(src.get('pump_watch_overflow') or [])
     seen=set(); ready=[x for x in ready if not (x.get('symbol') in seen or seen.add(x.get('symbol')))]; seen=set(); watches=[x for x in watches if not (x.get('symbol') in seen or seen.add(x.get('symbol')))]
-    out={'generated_at_ms':int(time.time()*1000),'radar_version':'5.5-concise','alerts_enabled':ENABLED,'selected':[],'watch':None}
+    out={'generated_at_ms':int(time.time()*1000),'radar_version':'5.6-hard-watch-slot-guard','alerts_enabled':ENABLED,'selected':[],'watch':None}
     for x in ready:
         msg=rich(x); res=send(x.get('symbol'),msg,'ARMED',x,scanner_status='READY_FOR_CHAT') if ENABLED else {'ok':True,'skipped':True}; out['selected'].append({'symbol':x.get('symbol'),'bucket':'READY_FOR_CHAT','rendered_message':msg,'notification':res})
     if watches:
