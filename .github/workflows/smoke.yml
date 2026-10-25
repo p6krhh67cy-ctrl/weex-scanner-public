@@ -1,8 +1,6 @@
 name: WEEX Scanner Watchdog
 
 on:
-  schedule:
-    - cron: '7,17,27,37,47,57 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -11,15 +9,16 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
-  group: weex-scanner
+  group: weex-scanner-loop
   cancel-in-progress: false
 
 jobs:
-  scan:
+  scanner-loop:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 355
     env:
       ALERTS_ENABLED: 'true'
       SCANNER_STATE_PATH: ./history/scanner_v2_state.json
@@ -32,36 +31,46 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Select local time and mode
+      - name: Run continuous scanner cycles
         shell: bash
         run: |
-          HOUR=$(TZ=Europe/Warsaw date +%H)
-          MINUTE=$(TZ=Europe/Warsaw date +%M)
-          NOW=$((10#$HOUR * 60 + 10#$MINUTE))
-          if [[ "${{ github.event_name }}" == "push" || "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            echo "RUN_SCANNER=true" >> "$GITHUB_ENV"
-            echo "SCANNER_RUN_MODE=full" >> "$GITHUB_ENV"
-          elif (( NOW < 480 || NOW > 1320 )); then
-            echo "RUN_SCANNER=false" >> "$GITHUB_ENV"
-          else
-            echo "RUN_SCANNER=true" >> "$GITHUB_ENV"
-            if (( 10#$MINUTE < 10 || (10#$MINUTE >= 30 && 10#$MINUTE < 40) )); then
-              echo "SCANNER_RUN_MODE=full" >> "$GITHUB_ENV"
-            else
-              echo "SCANNER_RUN_MODE=monitor" >> "$GITHUB_ENV"
-            fi
-          fi
-      - name: Run scanner
-        if: env.RUN_SCANNER == 'true'
-        run: python scripts/actions_runner.py
-      - name: Persist WATCH state
-        if: env.RUN_SCANNER == 'true'
-        shell: bash
-        run: |
+          set +e
           git config user.name 'weex-scanner-bot'
           git config user.email 'scanner@users.noreply.github.com'
-          git add history/scanner_v2_state.json history/turn_monitor_state.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Persist scanner state [skip ci]'
-            git push origin HEAD:main
-          fi
+          for cycle in $(seq 0 33); do
+            HOUR=$(TZ=Europe/Warsaw date +%H)
+            MINUTE=$(TZ=Europe/Warsaw date +%M)
+            NOW=$((10#$HOUR * 60 + 10#$MINUTE))
+            echo "Cycle $cycle at $(TZ=Europe/Warsaw date '+%F %T %Z')"
+            if (( NOW >= 480 && NOW <= 1320 )); then
+              if (( cycle % 3 == 0 )); then
+                export SCANNER_RUN_MODE=full
+              else
+                export SCANNER_RUN_MODE=monitor
+              fi
+              echo "Mode: $SCANNER_RUN_MODE"
+              python scripts/actions_runner.py || echo "Scanner cycle failed; continuing watchdog"
+              git add history/scanner_v2_state.json history/turn_monitor_state.json
+              if ! git diff --cached --quiet; then
+                git commit -m 'Persist scanner state [skip ci]'
+                git pull --rebase origin main
+                git push origin HEAD:main
+              fi
+            else
+              echo "Outside 08:00-22:00 Europe/Warsaw; scanner idle"
+            fi
+            if (( cycle < 33 )); then sleep 600; fi
+          done
+      - name: Hand off to next watchdog run
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          curl --fail-with-body -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/smoke.yml/dispatches" \
+            -d '{"ref":"main"}'
