@@ -11,6 +11,12 @@ permissions:
   contents: write
   actions: write
 
+# Exactly one watchdog may run. A successor dispatched at the end waits for
+# the current run to finish instead of creating overlapping scanner loops.
+concurrency:
+  group: weex-scanner-watchdog
+  cancel-in-progress: false
+
 jobs:
   scanner-loop:
     runs-on: ubuntu-latest
@@ -34,7 +40,6 @@ jobs:
           git config user.name 'weex-scanner-bot'
           git config user.email 'scanner@users.noreply.github.com'
 
-          LAST_SLOT=''
           END_EPOCH=$(( $(date +%s) + 20400 ))
 
           while (( $(date +%s) < END_EPOCH )); do
@@ -42,24 +47,31 @@ jobs:
             MINUTE=$(TZ=Europe/Warsaw date +%M)
             SECOND=$(TZ=Europe/Warsaw date +%S)
             H=$((10#$HOUR)); M=$((10#$MINUTE)); S=$((10#$SECOND))
+
+            # Never backfill an old slot. Starting at 11:34 must NOT send a
+            # delayed 11:30 WATCH. Wait for the next real boundary (11:40).
+            REM=$((M % 10))
+            if (( REM != 0 || S > 5 )); then
+              WAIT=$(((10 - REM) * 60 - S))
+              if (( WAIT <= 0 || WAIT > 600 )); then WAIT=1; fi
+              echo "Waiting ${WAIT}s for next exact Warsaw slot"
+              sleep "$WAIT"
+            fi
+
+            HOUR=$(TZ=Europe/Warsaw date +%H)
+            MINUTE=$(TZ=Europe/Warsaw date +%M)
+            H=$((10#$HOUR)); M=$((10#$MINUTE))
             NOW=$((H * 60 + M))
+            echo "Executing Warsaw slot $(printf '%02d:%02d' "$H" "$M") at $(TZ=Europe/Warsaw date '+%F %T %Z')"
 
-            # The active slot is the most recent 10-minute boundary.
-            # If the watchdog starts late (e.g. 11:34), execute the missed 11:30
-            # slot immediately instead of waiting until 11:40.
-            SLOT_MIN=$(( (M / 10) * 10 ))
-            SLOT=$(printf '%02d:%02d' "$H" "$SLOT_MIN")
-
-            if (( NOW >= 480 && NOW < 1320 )) && [[ "$SLOT" != "$LAST_SLOT" ]]; then
-              LAST_SLOT="$SLOT"
-              echo "Executing Warsaw slot $SLOT at $(TZ=Europe/Warsaw date '+%F %T %Z')"
-
-              if (( SLOT_MIN == 0 || SLOT_MIN == 30 )); then
+            if (( NOW >= 480 && NOW < 1320 )); then
+              # FULL only at :00/:30 -> may send aggregate WATCH.
+              # :10/:20/:40/:50 -> monitor only; no ordinary WATCH list.
+              if (( M == 0 || M == 30 )); then
                 export SCANNER_RUN_MODE=full
               else
                 export SCANNER_RUN_MODE=monitor
               fi
-
               echo "Mode: $SCANNER_RUN_MODE"
               python scripts/actions_runner.py || echo "Scanner cycle failed; continuing watchdog"
 
@@ -69,17 +81,12 @@ jobs:
                 git pull --rebase origin main || true
                 git push origin HEAD:main || true
               fi
+            else
+              echo "Outside 08:00-22:00 Europe/Warsaw; scanner idle"
             fi
 
-            # Sleep only until the next exact 10-minute boundary, then wake up.
-            MINUTE=$(TZ=Europe/Warsaw date +%M)
-            SECOND=$(TZ=Europe/Warsaw date +%S)
-            M=$((10#$MINUTE)); S=$((10#$SECOND))
-            REM=$((M % 10))
-            WAIT=$(((10 - REM) * 60 - S))
-            if (( WAIT <= 0 || WAIT > 600 )); then WAIT=1; fi
-            echo "Next slot in ${WAIT}s"
-            sleep "$WAIT"
+            # Move away from the just-processed boundary, then align again.
+            sleep 5
           done
       - name: Hand off to next watchdog run
         if: ${{ !cancelled() }}
