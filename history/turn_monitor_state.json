@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1792941601273,
+  "updated_at_ms": 1792942800895,
   "symbols": {
     "UNITREEUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -50,10 +50,10 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 46.0,
-      "confidence": 32.0,
+      "confidence": 31.0,
       "dump_score": 65,
-      "price": 0.006902,
-      "last_seen_ms": 1792941601273,
+      "price": 0.006841,
+      "last_seen_ms": 1792942800895,
       "last_ready_alert_ms": 0
     },
     "ARIAUSDT": {
@@ -71,33 +71,33 @@
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 46.0,
+      "timing": 28.0,
       "confidence": 59.0,
       "dump_score": 65,
-      "price": 0.4007,
-      "last_seen_ms": 1792939800975,
+      "price": 0.4056,
+      "last_seen_ms": 1792942800895,
       "last_ready_alert_ms": 0
     },
     "TRUTHUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
+      "timing": 52.0,
       "confidence": 48.0,
       "dump_score": 65,
-      "price": 0.019846,
-      "last_seen_ms": 1792941601273,
+      "price": 0.019781,
+      "last_seen_ms": 1792942800895,
       "last_ready_alert_ms": 0
     },
     "USELESSUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 46.0,
-      "confidence": 67.0,
+      "timing": 28.0,
+      "confidence": 39.0,
       "dump_score": 65,
-      "price": 0.17103,
-      "last_seen_ms": 1792939800975,
+      "price": 0.173,
+      "last_seen_ms": 1792942800895,
       "last_ready_alert_ms": 0
     },
     "REZUSDT": {
@@ -107,8 +107,8 @@
       "timing": 42.0,
       "confidence": 70.0,
       "dump_score": 65,
-      "price": 0.004495,
-      "last_seen_ms": 1792941601273,
+      "price": 0.004486,
+      "last_seen_ms": 1792942800895,
       "last_ready_alert_ms": 0
     },
     "FOLKSUSDT": {
@@ -116,21 +116,21 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 42.0,
-      "confidence": 46.0,
+      "confidence": 40.0,
       "dump_score": 65,
-      "price": 2.547,
-      "last_seen_ms": 1792941601273,
+      "price": 2.541,
+      "last_seen_ms": 1792942800895,
       "last_ready_alert_ms": 0
     },
     "ACUUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
-      "confidence": 63.0,
+      "timing": 60.0,
+      "confidence": 69.0,
       "dump_score": 65,
-      "price": 0.11634,
-      "last_seen_ms": 1792941601273,
+      "price": 0.11597,
+      "last_seen_ms": 1792942800895,
       "last_ready_alert_ms": 0
     }
   }
