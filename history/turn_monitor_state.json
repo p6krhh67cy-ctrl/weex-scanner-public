@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1792933801272,
+  "updated_at_ms": 1792934401236,
   "symbols": {
     "UNITREEUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -49,22 +49,22 @@
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 38.0,
-      "confidence": 32.0,
+      "timing": 46.0,
+      "confidence": 26.0,
       "dump_score": 65,
-      "price": 0.006996,
-      "last_seen_ms": 1792932601116,
+      "price": 0.006647,
+      "last_seen_ms": 1792934401236,
       "last_ready_alert_ms": 0
     },
     "ARIAUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
+      "cycle_state": "WATCH_RETEST",
+      "lane": "RETEST",
       "ready": false,
-      "timing": 86.0,
-      "confidence": 44.0,
-      "dump_score": 30,
+      "timing": 66.0,
+      "confidence": 58.0,
+      "dump_score": 65,
       "price": 0.07257,
-      "last_seen_ms": 1792933801272,
+      "last_seen_ms": 1792934401236,
       "last_ready_alert_ms": 0
     },
     "AVAUSDT": {
@@ -82,11 +82,11 @@
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 58.0,
+      "timing": 50.0,
       "confidence": 53.0,
       "dump_score": 65,
       "price": 0.019842,
-      "last_seen_ms": 1792933801272,
+      "last_seen_ms": 1792934401236,
       "last_ready_alert_ms": 0
     },
     "USELESSUSDT": {
