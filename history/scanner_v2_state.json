@@ -1,68 +1,59 @@
 {
-  "updated_at_ms": 1792927222365,
+  "updated_at_ms": 1792927821825,
   "symbols": {
-    "AINUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 78.0,
-      "confidence": 60.0,
-      "dump_score": 0,
-      "price": 0.03828,
-      "last_seen_ms": 1792927222365
-    },
-    "WOOUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 62.0,
-      "confidence": 72.0,
-      "dump_score": 0,
-      "price": 0.01076,
-      "last_seen_ms": 1792927222365
-    },
     "PROMUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 52.0,
+      "timing": 42.0,
       "confidence": 64.0,
       "dump_score": 0,
-      "price": 5.453,
-      "last_seen_ms": 1792927222365
+      "price": 5.443,
+      "last_seen_ms": 1792927821825
     },
     "REZUSDT": {
       "cycle_state": "TRACK",
       "lane": "NONE",
-      "timing": 78.0,
-      "confidence": 92.0,
+      "timing": 42.0,
+      "confidence": 78.0,
       "dump_score": 0,
-      "price": 0.004238,
-      "last_seen_ms": 1792927222365
+      "price": 0.00426,
+      "last_seen_ms": 1792927821825
     },
     "FOLKSUSDT": {
       "cycle_state": "TRACK",
       "lane": "NONE",
-      "timing": 42.0,
-      "confidence": 63.0,
+      "timing": 52.0,
+      "confidence": 69.0,
       "dump_score": 0,
-      "price": 2.387,
-      "last_seen_ms": 1792927222365
+      "price": 2.39,
+      "last_seen_ms": 1792927821825
+    },
+    "AINUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 58.0,
+      "confidence": 54.0,
+      "dump_score": 0,
+      "price": 0.03818,
+      "last_seen_ms": 1792927821825
+    },
+    "WOOUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 50.0,
+      "confidence": 60.0,
+      "dump_score": 0,
+      "price": 0.01075,
+      "last_seen_ms": 1792927821825
     },
     "AVAUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
       "timing": 46.0,
-      "confidence": 67.0,
+      "confidence": 73.0,
       "dump_score": 0,
       "price": 0.4121,
-      "last_seen_ms": 1792927222365
-    },
-    "KGENUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 46.0,
-      "confidence": 75.0,
-      "dump_score": 0,
-      "price": 0.1009,
-      "last_seen_ms": 1792927222365
+      "last_seen_ms": 1792927821825
     },
     "ACUUSDT": {
       "cycle_state": "CORRECTION_SPENT",
@@ -70,8 +61,8 @@
       "timing": 86.0,
       "confidence": 84.0,
       "dump_score": 0,
-      "price": 0.11145,
-      "last_seen_ms": 1792927222365
+      "price": 0.11169,
+      "last_seen_ms": 1792927821825
     },
     "GRASSUSDT": {
       "cycle_state": "CORRECTION_SPENT",
@@ -79,35 +70,17 @@
       "timing": 76.0,
       "confidence": 61.0,
       "dump_score": 0,
-      "price": 0.6676,
-      "last_seen_ms": 1792927222365
+      "price": 0.6646,
+      "last_seen_ms": 1792927821825
     },
     "NILUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 68.0,
-      "confidence": 78.0,
+      "timing": 58.0,
+      "confidence": 70.0,
       "dump_score": 0,
-      "price": 0.08671,
-      "last_seen_ms": 1792927222365
-    },
-    "PARTIUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 46.0,
-      "confidence": 63.0,
-      "dump_score": 0,
-      "price": 0.03395,
-      "last_seen_ms": 1792927222365
-    },
-    "ELSAUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 20.0,
-      "confidence": 48.0,
-      "dump_score": 0,
-      "price": 0.07754,
-      "last_seen_ms": 1792927222365
+      "price": 0.08637,
+      "last_seen_ms": 1792927821825
     },
     "SQDUSDT": {
       "cycle_state": "CORRECTION_SPENT",
@@ -115,17 +88,26 @@
       "timing": 60.0,
       "confidence": 56.0,
       "dump_score": 0,
-      "price": 0.02006,
-      "last_seen_ms": 1792927222365
+      "price": 0.02005,
+      "last_seen_ms": 1792927821825
     },
     "KMNOUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 46.0,
+      "timing": 36.0,
       "confidence": 63.0,
       "dump_score": 0,
-      "price": 0.04003,
-      "last_seen_ms": 1792927222365
+      "price": 0.03993,
+      "last_seen_ms": 1792927821825
+    },
+    "ELSAUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 20.0,
+      "confidence": 48.0,
+      "dump_score": 0,
+      "price": 0.07812,
+      "last_seen_ms": 1792927821825
     },
     "NAORISUSDT": {
       "cycle_state": "TRACK",
@@ -133,44 +115,35 @@
       "timing": 42.0,
       "confidence": 47.0,
       "dump_score": 0,
-      "price": 0.03258,
-      "last_seen_ms": 1792927222365
+      "price": 0.03228,
+      "last_seen_ms": 1792927821825
     },
     "TRUTHUSDT": {
       "cycle_state": "TRACK",
       "lane": "NONE",
       "timing": 46.0,
-      "confidence": 71.0,
+      "confidence": 63.0,
       "dump_score": 0,
-      "price": 0.019769,
-      "last_seen_ms": 1792927222365
+      "price": 0.019733,
+      "last_seen_ms": 1792927821825
     },
     "IDOLUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
       "timing": 46.0,
-      "confidence": 71.0,
+      "confidence": 57.0,
       "dump_score": 0,
-      "price": 0.007976,
-      "last_seen_ms": 1792927222365
+      "price": 0.007973,
+      "last_seen_ms": 1792927821825
     },
     "JCTUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "timing": 46.0,
-      "confidence": 34.0,
-      "dump_score": 65,
-      "price": 0.007373,
-      "last_seen_ms": 1792927222365
-    },
-    "ARIAUSDT": {
       "cycle_state": "TRACK",
       "lane": "NONE",
-      "timing": 20.0,
-      "confidence": 20.0,
+      "timing": 54.0,
+      "confidence": 16.0,
       "dump_score": 0,
-      "price": 0.07715,
-      "last_seen_ms": 1792927222365
+      "price": 0.007346,
+      "last_seen_ms": 1792927821825
     }
   }
 }
