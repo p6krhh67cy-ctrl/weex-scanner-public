@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1792932601116,
+  "updated_at_ms": 1792933801272,
   "symbols": {
     "UNITREEUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -57,14 +57,14 @@
       "last_ready_alert_ms": 0
     },
     "ARIAUSDT": {
-      "cycle_state": "WATCH_RETEST",
-      "lane": "RETEST",
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
       "ready": false,
-      "timing": 60.0,
-      "confidence": 60.0,
+      "timing": 86.0,
+      "confidence": 44.0,
       "dump_score": 30,
-      "price": 0.07341,
-      "last_seen_ms": 1792930801347,
+      "price": 0.07257,
+      "last_seen_ms": 1792933801272,
       "last_ready_alert_ms": 0
     },
     "AVAUSDT": {
@@ -83,10 +83,10 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 58.0,
-      "confidence": 59.0,
+      "confidence": 53.0,
       "dump_score": 65,
-      "price": 0.019764,
-      "last_seen_ms": 1792932601116,
+      "price": 0.019842,
+      "last_seen_ms": 1792933801272,
       "last_ready_alert_ms": 0
     },
     "USELESSUSDT": {
