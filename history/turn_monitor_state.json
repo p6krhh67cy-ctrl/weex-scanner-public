@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1792959000922,
+  "updated_at_ms": 1792959600725,
   "symbols": {
     "JCTUSDT": {
       "cycle_state": "WATCH_RETEST",
@@ -38,11 +38,11 @@
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 58.0,
+      "timing": 50.0,
       "confidence": 49.0,
       "dump_score": 65,
       "price": 0.16919,
-      "last_seen_ms": 1792959000922,
+      "last_seen_ms": 1792959600725,
       "last_ready_alert_ms": 0
     },
     "REZUSDT": {
@@ -72,10 +72,10 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 42.0,
-      "confidence": 52.0,
+      "confidence": 58.0,
       "dump_score": 65,
       "price": 0.11897,
-      "last_seen_ms": 1792959000922,
+      "last_seen_ms": 1792959600725,
       "last_ready_alert_ms": 0
     },
     "UNITREEUSDT": {
@@ -86,7 +86,7 @@
       "confidence": 50.0,
       "dump_score": 65,
       "price": 96.27,
-      "last_seen_ms": 1792959000922,
+      "last_seen_ms": 1792959600725,
       "last_ready_alert_ms": 0
     },
     "INITUSDT": {
@@ -94,21 +94,21 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 70.0,
-      "confidence": 55.0,
+      "confidence": 63.0,
       "dump_score": 65,
       "price": 0.16358,
-      "last_seen_ms": 1792959000922,
+      "last_seen_ms": 1792959600725,
       "last_ready_alert_ms": 0
     },
     "BNCUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 86.0,
-      "confidence": 71.0,
+      "timing": 76.0,
+      "confidence": 63.0,
       "dump_score": 65,
       "price": 5.54,
-      "last_seen_ms": 1792959000922,
+      "last_seen_ms": 1792959600725,
       "last_ready_alert_ms": 0
     },
     "CNPYUSDT": {
@@ -116,10 +116,10 @@
       "lane": "RETEST",
       "ready": false,
       "timing": 76.0,
-      "confidence": 60.0,
+      "confidence": 66.0,
       "dump_score": 65,
       "price": 0.2488,
-      "last_seen_ms": 1792959000922,
+      "last_seen_ms": 1792959600725,
       "last_ready_alert_ms": 0
     }
   }
