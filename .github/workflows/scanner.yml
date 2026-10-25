@@ -2,13 +2,6 @@ name: WEEX Scanner Manual
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - '.github/workflows/scanner.yml'
-      - 'scripts/**'
-      - 'config/**'
 
 permissions:
   contents: write
@@ -27,6 +20,7 @@ jobs:
       TURN_MONITOR_STATE_PATH: ./history/turn_monitor_state.json
       TZ: Europe/Warsaw
       SCANNER_RUN_MODE: full
+      SCANNER_OWNER_GENERATION: '20261025-v3'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -36,14 +30,14 @@ jobs:
           python-version: '3.12'
       - name: Run production scanner
         run: python scripts/actions_runner.py
-      - name: Persist WATCH state
+      - name: Persist scanner state and archive
         shell: bash
         run: |
           git config user.name 'weex-scanner-bot'
           git config user.email 'scanner@users.noreply.github.com'
-          git add history/scanner_v2_state.json history/turn_monitor_state.json
+          git add history/scanner_v2_state.json history/turn_monitor_state.json history/scanner_cycles.jsonl
           if ! git diff --cached --quiet; then
-            git commit -m 'Persist scanner WATCH state [skip ci]'
+            git commit -m 'Persist manual scanner state [skip ci]'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
