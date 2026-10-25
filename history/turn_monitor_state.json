@@ -1,1 +1,49 @@
-{"updated_at_ms":0,"symbols":{}}
+{
+  "updated_at_ms": 1792922636578,
+  "symbols": {
+    "UNITREEUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 86.0,
+      "confidence": 69.0,
+      "dump_score": 65,
+      "price": 95.12,
+      "last_seen_ms": 1792922636578,
+      "last_ready_alert_ms": 0
+    },
+    "TAUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 42.0,
+      "confidence": 38.0,
+      "dump_score": 65,
+      "price": 0.05588,
+      "last_seen_ms": 1792922636578,
+      "last_ready_alert_ms": 0
+    },
+    "AIOTUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 50.0,
+      "confidence": 53.0,
+      "dump_score": 65,
+      "price": 0.06752,
+      "last_seen_ms": 1792922636578,
+      "last_ready_alert_ms": 0
+    },
+    "BNCUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 58.0,
+      "confidence": 49.0,
+      "dump_score": 65,
+      "price": 5.5284,
+      "last_seen_ms": 1792922636578,
+      "last_ready_alert_ms": 0
+    }
+  }
+}
