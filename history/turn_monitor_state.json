@@ -1,15 +1,15 @@
 {
-  "updated_at_ms": 1792924952609,
+  "updated_at_ms": 1792925974306,
   "symbols": {
     "UNITREEUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
       "timing": 86.0,
-      "confidence": 69.0,
+      "confidence": 75.0,
       "dump_score": 65,
-      "price": 95.12,
-      "last_seen_ms": 1792922636578,
+      "price": 95.22,
+      "last_seen_ms": 1792925974306,
       "last_ready_alert_ms": 0
     },
     "TAUSDT": {
@@ -41,8 +41,8 @@
       "timing": 58.0,
       "confidence": 49.0,
       "dump_score": 65,
-      "price": 5.5284,
-      "last_seen_ms": 1792922636578,
+      "price": 5.5195,
+      "last_seen_ms": 1792925974306,
       "last_ready_alert_ms": 0
     }
   }
