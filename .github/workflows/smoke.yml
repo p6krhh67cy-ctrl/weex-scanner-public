@@ -33,46 +33,53 @@ jobs:
           set +e
           git config user.name 'weex-scanner-bot'
           git config user.email 'scanner@users.noreply.github.com'
-          for cycle in $(seq 0 32); do
-            # Align every cycle to the next exact 10-minute Warsaw slot.
-            MINUTE=$(TZ=Europe/Warsaw date +%M)
-            SECOND=$(TZ=Europe/Warsaw date +%S)
-            M=$((10#$MINUTE))
-            S=$((10#$SECOND))
-            REM=$((M % 10))
-            if (( REM != 0 || S > 5 )); then
-              WAIT=$(((10 - REM) * 60 - S))
-              if (( WAIT <= 0 )); then WAIT=$((600 - S)); fi
-              echo "Waiting ${WAIT}s for next 10-minute slot"
-              sleep "$WAIT"
-            fi
 
+          LAST_SLOT=''
+          END_EPOCH=$(( $(date +%s) + 20400 ))
+
+          while (( $(date +%s) < END_EPOCH )); do
             HOUR=$(TZ=Europe/Warsaw date +%H)
             MINUTE=$(TZ=Europe/Warsaw date +%M)
-            NOW=$((10#$HOUR * 60 + 10#$MINUTE))
-            M=$((10#$MINUTE))
-            echo "Cycle $cycle at $(TZ=Europe/Warsaw date '+%F %T %Z')"
-            if (( NOW >= 480 && NOW <= 1320 )); then
-              # Full market scan + aggregate WATCH notification ONLY at :00 and :30.
-              # The :10/:20/:40/:50 runs are monitor-only and may alert only
-              # READY / near-ready turn-retest candidates, never ordinary WATCH lists.
-              if (( M == 0 || M == 30 )); then
+            SECOND=$(TZ=Europe/Warsaw date +%S)
+            H=$((10#$HOUR)); M=$((10#$MINUTE)); S=$((10#$SECOND))
+            NOW=$((H * 60 + M))
+
+            # The active slot is the most recent 10-minute boundary.
+            # If the watchdog starts late (e.g. 11:34), execute the missed 11:30
+            # slot immediately instead of waiting until 11:40.
+            SLOT_MIN=$(( (M / 10) * 10 ))
+            SLOT=$(printf '%02d:%02d' "$H" "$SLOT_MIN")
+
+            if (( NOW >= 480 && NOW < 1320 )) && [[ "$SLOT" != "$LAST_SLOT" ]]; then
+              LAST_SLOT="$SLOT"
+              echo "Executing Warsaw slot $SLOT at $(TZ=Europe/Warsaw date '+%F %T %Z')"
+
+              if (( SLOT_MIN == 0 || SLOT_MIN == 30 )); then
                 export SCANNER_RUN_MODE=full
               else
                 export SCANNER_RUN_MODE=monitor
               fi
+
               echo "Mode: $SCANNER_RUN_MODE"
               python scripts/actions_runner.py || echo "Scanner cycle failed; continuing watchdog"
+
               git add history/scanner_v2_state.json history/turn_monitor_state.json
               if ! git diff --cached --quiet; then
                 git commit -m 'Persist scanner state [skip ci]'
                 git pull --rebase origin main || true
                 git push origin HEAD:main || true
               fi
-            else
-              echo "Outside 08:00-22:00 Europe/Warsaw; scanner idle"
             fi
-            if (( cycle < 32 )); then sleep 5; fi
+
+            # Sleep only until the next exact 10-minute boundary, then wake up.
+            MINUTE=$(TZ=Europe/Warsaw date +%M)
+            SECOND=$(TZ=Europe/Warsaw date +%S)
+            M=$((10#$MINUTE)); S=$((10#$SECOND))
+            REM=$((M % 10))
+            WAIT=$(((10 - REM) * 60 - S))
+            if (( WAIT <= 0 || WAIT > 600 )); then WAIT=1; fi
+            echo "Next slot in ${WAIT}s"
+            sleep "$WAIT"
           done
       - name: Hand off to next watchdog run
         if: ${{ !cancelled() }}
