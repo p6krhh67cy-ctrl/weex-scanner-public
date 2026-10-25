@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1792959600725,
+  "updated_at_ms": 1792960800529,
   "symbols": {
     "JCTUSDT": {
       "cycle_state": "WATCH_RETEST",
@@ -72,10 +72,10 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 42.0,
-      "confidence": 58.0,
+      "confidence": 52.0,
       "dump_score": 65,
-      "price": 0.11897,
-      "last_seen_ms": 1792959600725,
+      "price": 0.11867,
+      "last_seen_ms": 1792960800529,
       "last_ready_alert_ms": 0
     },
     "UNITREEUSDT": {
@@ -85,19 +85,19 @@
       "timing": 42.0,
       "confidence": 50.0,
       "dump_score": 65,
-      "price": 96.27,
-      "last_seen_ms": 1792959600725,
+      "price": 96.6,
+      "last_seen_ms": 1792960800529,
       "last_ready_alert_ms": 0
     },
     "INITUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 70.0,
+      "timing": 60.0,
       "confidence": 63.0,
       "dump_score": 65,
-      "price": 0.16358,
-      "last_seen_ms": 1792959600725,
+      "price": 0.16361,
+      "last_seen_ms": 1792960800529,
       "last_ready_alert_ms": 0
     },
     "BNCUSDT": {
@@ -105,10 +105,10 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 76.0,
-      "confidence": 63.0,
+      "confidence": 71.0,
       "dump_score": 65,
-      "price": 5.54,
-      "last_seen_ms": 1792959600725,
+      "price": 5.542,
+      "last_seen_ms": 1792960800529,
       "last_ready_alert_ms": 0
     },
     "CNPYUSDT": {
@@ -118,8 +118,19 @@
       "timing": 76.0,
       "confidence": 66.0,
       "dump_score": 65,
-      "price": 0.2488,
-      "last_seen_ms": 1792959600725,
+      "price": 0.2452,
+      "last_seen_ms": 1792960800529,
+      "last_ready_alert_ms": 0
+    },
+    "SKYAIUSDT": {
+      "cycle_state": "WATCH_RETEST",
+      "lane": "RETEST",
+      "ready": false,
+      "timing": 66.0,
+      "confidence": 57.0,
+      "dump_score": 65,
+      "price": 0.03586,
+      "last_seen_ms": 1792960800529,
       "last_ready_alert_ms": 0
     }
   }
