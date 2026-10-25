@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1792960800529,
+  "updated_at_ms": 1792961401107,
   "symbols": {
     "JCTUSDT": {
       "cycle_state": "WATCH_RETEST",
@@ -56,59 +56,48 @@
       "last_seen_ms": 1792957201044,
       "last_ready_alert_ms": 0
     },
-    "FOLKSUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "ready": false,
-      "timing": 50.0,
-      "confidence": 42.0,
-      "dump_score": 30,
-      "price": 2.543,
-      "last_seen_ms": 1792946400547,
-      "last_ready_alert_ms": 0
-    },
     "ACUUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
-      "confidence": 52.0,
+      "timing": 70.0,
+      "confidence": 66.0,
       "dump_score": 65,
       "price": 0.11867,
-      "last_seen_ms": 1792960800529,
+      "last_seen_ms": 1792961401107,
       "last_ready_alert_ms": 0
     },
     "UNITREEUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
-      "confidence": 50.0,
+      "timing": 52.0,
+      "confidence": 56.0,
       "dump_score": 65,
       "price": 96.6,
-      "last_seen_ms": 1792960800529,
+      "last_seen_ms": 1792961401107,
       "last_ready_alert_ms": 0
     },
     "INITUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 60.0,
+      "timing": 70.0,
       "confidence": 63.0,
       "dump_score": 65,
       "price": 0.16361,
-      "last_seen_ms": 1792960800529,
+      "last_seen_ms": 1792961401107,
       "last_ready_alert_ms": 0
     },
     "BNCUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 76.0,
-      "confidence": 71.0,
+      "timing": 86.0,
+      "confidence": 77.0,
       "dump_score": 65,
       "price": 5.542,
-      "last_seen_ms": 1792960800529,
+      "last_seen_ms": 1792961401107,
       "last_ready_alert_ms": 0
     },
     "CNPYUSDT": {
@@ -119,18 +108,18 @@
       "confidence": 66.0,
       "dump_score": 65,
       "price": 0.2452,
-      "last_seen_ms": 1792960800529,
+      "last_seen_ms": 1792961401107,
       "last_ready_alert_ms": 0
     },
     "SKYAIUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 66.0,
+      "timing": 76.0,
       "confidence": 57.0,
       "dump_score": 65,
       "price": 0.03586,
-      "last_seen_ms": 1792960800529,
+      "last_seen_ms": 1792961401107,
       "last_ready_alert_ms": 0
     }
   }
