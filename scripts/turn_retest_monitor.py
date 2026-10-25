@@ -1,8 +1,21 @@
 #!/usr/bin/env python3
-"""10-minute monitor for v11 WATCH candidates, with 4h persistence across full scans."""
+"""10-minute monitor for WATCH candidates.
+
+Lifecycle rules:
+- base WATCH lifetime: 6 active hours from admission/reset,
+- a fresh observed high resets the 6h clock,
+- strong multi-day PUMP candidates remain alive while still near their high,
+- WATCH state survives the overnight shutdown and is revalidated after 08:00,
+- READY alerts are emitted by this monitor; the workflow controls the 08:00-23:00 window.
+"""
 import importlib.util,json,os,time
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1]; RADAR=ROOT/'snapshots/scanner_v2_radar.json'; MARKET=ROOT/'snapshots/market_scan.json'; STATE=Path(os.environ.get('TURN_MONITOR_STATE_PATH','/data/history/turn_monitor_state.json')); TTL_MS=4*60*60*1000
+ROOT=Path(__file__).resolve().parents[1]; RADAR=ROOT/'snapshots/scanner_v2_radar.json'; MARKET=ROOT/'snapshots/market_scan.json'; STATE=Path(os.environ.get('TURN_MONITOR_STATE_PATH','/data/history/turn_monitor_state.json'))
+TTL_MS=6*60*60*1000
+OVERNIGHT_GRACE_MS=16*60*60*1000
+WARSAW=ZoneInfo('Europe/Warsaw')
 def loadmod(name,path):
     s=importlib.util.spec_from_file_location(name,str(path)); m=importlib.util.module_from_spec(s); s.loader.exec_module(m); return m
 scan=loadmod('scan_market_v2_live',ROOT/'scripts/scan_market_v2.py'); early=loadmod('scanner_v2_early_live',ROOT/'scripts/scanner_v2_early_warning.py'); overlay=loadmod('scanner_v2_overlay_live',ROOT/'scripts/scanner_v2_predrop_fix.py'); sender=loadmod('scanner_v2_sender_live',ROOT/'scripts/send_scanner_v2_radar.py')
@@ -24,16 +37,28 @@ def classify_live(x,lane):
     else:normal=has_lh and failed and exhaust and timing>=55 and tech>=52 and not has_ll and dg; trigger=normal
     mode='EXTREME_PUMP_EARLY' if extreme_ready else ('NORMAL_DUMP_GATE' if normal else None)
     return rw>=2.5 and sq<=88 and setup>=45 and trigger,rw,timing,tech,setup,sq,sig,dump_score,dump_evidence,mode,lane
+def lifecycle_alive(prev,now):
+    reset=int(prev.get('watch_reset_ms') or prev.get('first_watch_ms') or prev.get('last_seen_ms') or 0)
+    age=now-reset if reset else 10**18
+    if age<=TTL_MS:return True,False
+    # The scanner is intentionally off overnight. At the first morning revalidation,
+    # preserve yesterday's WATCH long enough to inspect it rather than dropping it by clock time.
+    hour=datetime.now(WARSAW).hour
+    if hour==8 and age<=OVERNIGHT_GRACE_MS:return True,True
+    # A2/multi-day pump: no hard TTL while the structure remains high and extended.
+    if bool(prev.get('multi_day_hold')):return True,False
+    return False,False
 def main():
-    radar=readj(RADAR,{}); market=readj(MARKET,{}); raw_by_symbol={str(x.get('symbol') or ''):x for x in (market.get('analyzed_all') or market.get('candidates') or [])}; src=(radar.get('pump_watch_all') or [])+(radar.get('retest_watch_all') or []); old=readj(STATE,{'symbols':{}}); oldsym=old.get('symbols') or {}; now=int(time.time()*1000); watched=[]; seen=set()
+    radar=readj(RADAR,{}); market=readj(MARKET,{}); raw_by_symbol={str(x.get('symbol') or ''):x for x in (market.get('analyzed_all') or market.get('candidates') or [])}; src=(radar.get('pump_watch_all') or [])+(radar.get('retest_watch_all') or []); old=readj(STATE,{'symbols':{}}); oldsym=old.get('symbols') or {}; now=int(time.time()*1000); watched=[]; seen=set(); overnight={}
     for x in src:
         sym=str(x.get('symbol') or ''); lane=str(x.get('radar_lane') or '').upper()
-        if sym and sym not in seen and lane in ('PUMP','RETEST') and str(x.get('cycle_state') or '').upper() in ('WATCH_PUMP','WATCH_RETEST'):seen.add(sym); watched.append({'symbol':sym,'lane':lane})
+        if sym and sym not in seen and lane in ('PUMP','RETEST') and str(x.get('cycle_state') or '').upper() in ('WATCH_PUMP','WATCH_RETEST'):seen.add(sym); watched.append({'symbol':sym,'lane':lane,'fresh':True})
     for sym,prev in oldsym.items():
-        age=now-int(prev.get('last_seen_ms') or 0); lane=str(prev.get('lane') or '').upper()
-        if sym not in seen and sym in raw_by_symbol and lane in ('PUMP','RETEST') and age<=TTL_MS:
-            seen.add(sym); watched.append({'symbol':sym,'lane':lane})
+        lane=str(prev.get('lane') or '').upper(); alive,carry=lifecycle_alive(prev,now)
+        if sym not in seen and sym in raw_by_symbol and lane in ('PUMP','RETEST') and alive:
+            seen.add(sym); watched.append({'symbol':sym,'lane':lane,'fresh':False}); overnight[sym]=carry
     watched=watched[:30]; results=[]; sent=[]; errors={}; scan.NOW=now
+    kept={}
     for source in watched:
         sym=str(source.get('symbol') or ''); lane=str(source.get('lane') or '').upper()
         try:
@@ -45,8 +70,15 @@ def main():
             last_alert=int(prev.get('last_ready_alert_ms') or 0); cooldown=(now-last_alert)>=60*60*1000; trigger=ready and material and (not prev_ready or cooldown)
             if trigger:
                 msg=sender.rich(x,False); res=sender.send(sym,msg,'ARMED',x) if sender.ENABLED else {'ok':True,'skipped':True}; sent.append({'symbol':sym,'state':state,'reward':rw,'dump_score':dump_score,'trigger_mode':mode,'result':res}); last_alert=now
-            results.append({'symbol':sym,'lane':lane,'state':state,'timing':timing,'technical':tech,'dump_score':dump_score,'reward':rw,'trigger_mode':mode,'ready':ready}); oldsym[sym]={'cycle_state':state,'lane':lane,'ready':ready,'timing':timing,'confidence':tech,'dump_score':dump_score,'price':x.get('price'),'last_seen_ms':now,'last_ready_alert_ms':last_alert}
+            price=n(x.get('price')); old_high=n(prev.get('watch_high_price')); new_high=price>0 and (old_high<=0 or price>old_high*1.001)
+            reset=int(prev.get('watch_reset_ms') or prev.get('first_watch_ms') or now)
+            if source.get('fresh') and not prev: reset=now
+            if new_high or overnight.get(sym): reset=now
+            watch_high=max(old_high,price)
+            metrics=x.get('metrics') or {}; pump10=max(0,n(metrics.get('pump_10d_pct'))); dist10=max(0,abs(n(metrics.get('distance_from_10d_high_pct'),999)))
+            # A2: strongly extended multi-day PUMP still trading near its 10d high.
+            multi_day_hold=(lane=='PUMP' and pump10>=30 and dist10<=15)
+            results.append({'symbol':sym,'lane':lane,'state':state,'timing':timing,'technical':tech,'dump_score':dump_score,'reward':rw,'trigger_mode':mode,'ready':ready,'watch_reset':new_high or bool(overnight.get(sym)),'multi_day_hold':multi_day_hold}); kept[sym]={'cycle_state':state,'lane':lane,'ready':ready,'timing':timing,'confidence':tech,'dump_score':dump_score,'price':x.get('price'),'first_watch_ms':int(prev.get('first_watch_ms') or now),'watch_reset_ms':reset,'watch_high_price':watch_high,'multi_day_hold':multi_day_hold,'last_seen_ms':now,'last_ready_alert_ms':last_alert}
         except Exception as e:errors[sym]=f'{type(e).__name__}: {e}'
-    oldsym={s:v for s,v in oldsym.items() if now-int(v.get('last_seen_ms') or 0)<=TTL_MS}
-    writej(STATE,{'updated_at_ms':now,'symbols':oldsym}); print(json.dumps({'turn_monitor':True,'watched':len(watched),'checked':len(results),'ready_alerts':[x['symbol'] for x in sent],'errors':errors,'results':results},ensure_ascii=False))
+    writej(STATE,{'updated_at_ms':now,'symbols':kept}); print(json.dumps({'turn_monitor':True,'watched':len(watched),'checked':len(results),'ready_alerts':[x['symbol'] for x in sent],'errors':errors,'results':results},ensure_ascii=False))
 if __name__=='__main__':main()
