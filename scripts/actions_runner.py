@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """GitHub Actions runner for the WEEX scanner."""
 import os, subprocess, sys
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT=Path(__file__).resolve().parents[1]
 os.chdir(ROOT)
@@ -15,14 +17,23 @@ def run(path):
     print(f'RUN {path}',flush=True)
     subprocess.run([sys.executable,path],check=True)
 
+def warsaw_full_slot():
+    now=datetime.now(ZoneInfo('Europe/Warsaw'))
+    # Hard safety gate independent of workflow mode: aggregate WATCH sender
+    # can run only at the real Warsaw :00 or :30 boundary (small execution window).
+    return now.minute in (0,30) and now.second < 180
+
 if MODE=='full':
     run('scripts/scan_market_v2_compat.py')
     run('scripts/scanner_v2_predrop_fix.py')
-    run('scripts/send_scanner_v2_radar.py')
-    print('SCANNER_FULL_OK',flush=True)
+    if warsaw_full_slot():
+        run('scripts/send_scanner_v2_radar.py')
+        print('SCANNER_FULL_OK',flush=True)
+    else:
+        print('WATCH_SENDER_BLOCKED_OUTSIDE_REAL_FULL_SLOT',flush=True)
+        run('scripts/turn_retest_monitor.py')
+        print('SCANNER_MONITOR_OK',flush=True)
 elif MODE=='monitor':
-    # A monitor run needs the latest market/radar snapshot. On ephemeral Actions
-    # runners rebuild it first, but only WATCH names are re-analysed by the turn monitor.
     run('scripts/scan_market_v2_compat.py')
     run('scripts/scanner_v2_predrop_fix.py')
     run('scripts/turn_retest_monitor.py')
