@@ -12,7 +12,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: weex-scanner-watchdog
+  group: weex-scanner-watchdog-v3
   cancel-in-progress: false
 
 jobs:
@@ -23,6 +23,7 @@ jobs:
       ALERTS_ENABLED: 'true'
       SCANNER_STATE_PATH: ./history/scanner_v2_state.json
       TURN_MONITOR_STATE_PATH: ./history/turn_monitor_state.json
+      SCANNER_OWNER_GENERATION: '20261025-v3'
       TZ: Europe/Warsaw
     steps:
       - uses: actions/checkout@v4
@@ -46,8 +47,6 @@ jobs:
               echo "Waiting ${WAIT}s for next exact Warsaw slot"; sleep "$WAIT"
             fi
 
-            # Pull the newest scanner code before every slot so a running watchdog
-            # receives fixes without needing to be restarted.
             git pull --rebase origin main || true
             HOUR=$(TZ=Europe/Warsaw date +%H); MINUTE=$(TZ=Europe/Warsaw date +%M)
             H=$((10#$HOUR)); M=$((10#$MINUTE)); NOW=$((H * 60 + M))
@@ -57,7 +56,6 @@ jobs:
               echo "Mode: $SCANNER_RUN_MODE"
               python scripts/actions_runner.py || echo "Scanner cycle failed; continuing watchdog"
 
-              # State + append-only cycle archive are committed after EVERY slot.
               git add history/scanner_v2_state.json history/turn_monitor_state.json history/scanner_cycles.jsonl
               if ! git diff --cached --quiet; then
                 git commit -m "Archive scanner slot $(TZ=Europe/Warsaw date '+%F %H:%M') [skip ci]"
