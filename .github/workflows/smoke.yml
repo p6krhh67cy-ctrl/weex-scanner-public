@@ -12,13 +12,7 @@ on:
     paths:
       - '.github/workflows/smoke.yml'
   schedule:
-    # GitHub cron is UTC. On 26 Oct 2026 Warsaw is CET (UTC+1).
-    # FULL: 08:00, 08:30 ... 22:00 Warsaw.
-    - cron: '0,30 7-20 * * *'
-    - cron: '0 21 * * *'
-    # WATCH monitor: 08:10/20, 08:40/50 ... 21:40/50, then 22:10..22:50 Warsaw.
-    - cron: '10,20,40,50 7-20 * * *'
-    - cron: '10,20,30,40,50 21 * * *'
+    - cron: '*/10 7-21 * * *'
 
 permissions:
   contents: write
@@ -44,40 +38,39 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Resolve scheduled role and run one scanner cycle
+      - name: Resolve Warsaw slot and run scanner
         shell: bash
         env:
           REQUESTED_MODE: ${{ github.event.inputs.mode }}
           EVENT_NAME: ${{ github.event_name }}
-          SCHEDULE_EXPR: ${{ github.event.schedule }}
         run: |
           set -euo pipefail
           git config user.name 'weex-scanner-bot'
           git config user.email 'scanner@users.noreply.github.com'
-
           MODE="${REQUESTED_MODE:-}"
+          HOUR=$(TZ=Europe/Warsaw date +%H)
+          MINUTE=$(TZ=Europe/Warsaw date +%M)
+          H=$((10#$HOUR)); M=$((10#$MINUTE)); NOW=$((H*60+M))
+          SLOT=$(( ((M + 4) / 10) * 10 ))
+          if (( SLOT >= 60 )); then SLOT=0; fi
           if [[ "$EVENT_NAME" == "push" ]]; then
             MODE=full
           elif [[ "$MODE" != "full" && "$MODE" != "monitor" ]]; then
-            case "$SCHEDULE_EXPR" in
-              '0,30 7-20 * * *'|'0 21 * * *') MODE=full ;;
-              '10,20,40,50 7-20 * * *'|'10,20,30,40,50 21 * * *') MODE=monitor ;;
-              *) echo "Unknown schedule: $SCHEDULE_EXPR"; exit 1 ;;
-            esac
+            if (( NOW >= 480 && NOW <= 1324 && (SLOT == 0 || SLOT == 30) )); then
+              MODE=full
+            elif (( NOW >= 480 && NOW < 1380 )); then
+              MODE=monitor
+            else
+              echo "Outside scanner hours"
+              exit 0
+            fi
           fi
-
           export SCANNER_RUN_MODE="$MODE"
-          echo "Warsaw $(TZ=Europe/Warsaw date '+%F %T %Z') event=$EVENT_NAME schedule='$SCHEDULE_EXPR' mode=$SCANNER_RUN_MODE"
+          echo "Warsaw $(TZ=Europe/Warsaw date '+%F %T %Z') event=$EVENT_NAME slot=$SLOT mode=$MODE"
           python scripts/actions_runner.py
-
           git add history/scanner_v2_state.json history/turn_monitor_state.json history/scanner_cycles.jsonl
           if ! git diff --cached --quiet; then
-            git commit -m "Archive scanner cycle $(TZ=Europe/Warsaw date '+%F %H:%M') [skip ci]"
-            for attempt in 1 2 3; do
-              if git pull --rebase origin main && git push origin HEAD:main; then
-                break
-              fi
-              if [[ "$attempt" == "3" ]]; then exit 1; fi
-              sleep $((attempt * 2))
-            done
+            git commit -m "Archive scanner $MODE $(TZ=Europe/Warsaw date '+%F %H:%M') [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
