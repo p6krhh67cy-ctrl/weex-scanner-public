@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """GitHub Actions runner for the WEEX scanner."""
 import os, subprocess, sys
-from datetime import datetime
 from pathlib import Path
-from zoneinfo import ZoneInfo
 
 ROOT=Path(__file__).resolve().parents[1]
 os.chdir(ROOT)
@@ -12,24 +10,22 @@ Path('history').mkdir(exist_ok=True)
 os.environ.setdefault('SCANNER_STATE_PATH',str(ROOT/'history'/'scanner_v2_state.json'))
 os.environ.setdefault('TURN_MONITOR_STATE_PATH',str(ROOT/'history'/'turn_monitor_state.json'))
 REQUESTED=os.environ.get('SCANNER_RUN_MODE','full').strip().lower()
-OWNER_GENERATION='20261025-v3'
+OWNER_GENERATION='20261026-v6'
 
 if os.environ.get('SCANNER_OWNER_GENERATION') != OWNER_GENERATION:
-    print('STALE_SCANNER_RUN_BLOCKED owner generation mismatch', flush=True)
-    raise SystemExit(0)
+    print(f"STALE_SCANNER_RUN_BLOCKED owner={os.environ.get('SCANNER_OWNER_GENERATION')!r} expected={OWNER_GENERATION!r}", flush=True)
+    raise SystemExit(2)
 
 def run(path):
     print(f'RUN {path}',flush=True)
     subprocess.run([sys.executable,path],check=True)
 
-def warsaw_full_slot():
-    now=datetime.now(ZoneInfo('Europe/Warsaw'))
-    return now.minute in (0,30) and now.second < 180
-
 if REQUESTED not in ('full','monitor'):
     raise SystemExit(f'Unknown SCANNER_RUN_MODE={REQUESTED!r}')
 
-EFFECTIVE='full' if REQUESTED=='full' and warsaw_full_slot() else 'monitor'
+# The workflow owns slot classification. Do not silently downgrade FULL based on
+# the wall clock: scheduled GitHub jobs can start a few minutes late.
+EFFECTIVE=REQUESTED
 os.environ['SCANNER_EFFECTIVE_MODE']=EFFECTIVE
 print(f'REQUESTED_MODE={REQUESTED} EFFECTIVE_MODE={EFFECTIVE}',flush=True)
 
