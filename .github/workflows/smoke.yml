@@ -12,7 +12,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: weex-scanner-watchdog-v3
+  group: weex-scanner-watchdog-v4
   cancel-in-progress: true
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
       ALERTS_ENABLED: 'true'
       SCANNER_STATE_PATH: ./history/scanner_v2_state.json
       TURN_MONITOR_STATE_PATH: ./history/turn_monitor_state.json
-      SCANNER_OWNER_GENERATION: '20261026-v7'
+      SCANNER_OWNER_GENERATION: '20261026-v8'
       TZ: Europe/Warsaw
     steps:
       - uses: actions/checkout@v4
@@ -50,13 +50,9 @@ jobs:
             HOUR=$(TZ=Europe/Warsaw date +%H); MINUTE=$(TZ=Europe/Warsaw date +%M)
             H=$((10#$HOUR)); M=$((10#$MINUTE)); NOW=$((H * 60 + M))
             echo "Executing Warsaw slot $(printf '%02d:%02d' "$H" "$M") at $(TZ=Europe/Warsaw date '+%F %T %Z')"
-            if (( NOW >= 480 && NOW <= 1320 && (M == 0 || M == 30) )); then
-              export SCANNER_RUN_MODE=full
-            elif (( NOW >= 480 && NOW < 1380 )); then
-              export SCANNER_RUN_MODE=monitor
-            else
-              unset SCANNER_RUN_MODE
-            fi
+            if (( NOW >= 480 && NOW <= 1320 && (M == 0 || M == 30) )); then export SCANNER_RUN_MODE=full
+            elif (( NOW >= 480 && NOW < 1380 )); then export SCANNER_RUN_MODE=monitor
+            else unset SCANNER_RUN_MODE; fi
             if [[ -n "${SCANNER_RUN_MODE:-}" ]]; then
               echo "Mode: $SCANNER_RUN_MODE"
               python scripts/actions_runner.py || echo "Scanner cycle failed; continuing watchdog"
@@ -66,9 +62,7 @@ jobs:
                 git pull --rebase origin main || true
                 git push origin HEAD:main || true
               fi
-            else
-              echo "Outside scanner window Europe/Warsaw; scanner idle"
-            fi
+            else echo "Outside scanner window Europe/Warsaw; scanner idle"; fi
             sleep 5
           done
       - name: Hand off to next watchdog run
