@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1793031000640,
+  "updated_at_ms": 1793031600427,
   "symbols": {
     "JCTUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -13,22 +13,22 @@
       "watch_reset_ms": 1793031000640,
       "watch_high_price": 0.006927,
       "multi_day_hold": false,
-      "last_seen_ms": 1793031000640,
+      "last_seen_ms": 1793031600427,
       "last_ready_alert_ms": 0
     },
     "REZUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 58.0,
-      "confidence": 63.0,
+      "timing": 42.0,
+      "confidence": 55.0,
       "dump_score": 65,
       "price": 0.004501,
       "first_watch_ms": 1793029200699,
       "watch_reset_ms": 1793031000640,
       "watch_high_price": 0.004501,
       "multi_day_hold": true,
-      "last_seen_ms": 1793031000640,
+      "last_seen_ms": 1793031600427,
       "last_ready_alert_ms": 0
     },
     "STBLUSDT": {
@@ -43,14 +43,14 @@
       "watch_reset_ms": 1793029200699,
       "watch_high_price": 0.02711,
       "multi_day_hold": false,
-      "last_seen_ms": 1793031000640,
+      "last_seen_ms": 1793031600427,
       "last_ready_alert_ms": 0
     },
     "LIGHTUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 20.0,
+      "timing": 28.0,
       "confidence": 22.0,
       "dump_score": 65,
       "price": 0.285,
@@ -58,7 +58,7 @@
       "watch_reset_ms": 1793031000640,
       "watch_high_price": 0.285,
       "multi_day_hold": true,
-      "last_seen_ms": 1793031000640,
+      "last_seen_ms": 1793031600427,
       "last_ready_alert_ms": 0
     },
     "QNTUSDT": {
@@ -73,14 +73,14 @@
       "watch_reset_ms": 1793029200699,
       "watch_high_price": 210.86,
       "multi_day_hold": false,
-      "last_seen_ms": 1793031000640,
+      "last_seen_ms": 1793031600427,
       "last_ready_alert_ms": 0
     },
     "ERAUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 50.0,
+      "timing": 60.0,
       "confidence": 63.0,
       "dump_score": 65,
       "price": 0.0872,
@@ -88,7 +88,7 @@
       "watch_reset_ms": 1793029200699,
       "watch_high_price": 0.08785,
       "multi_day_hold": false,
-      "last_seen_ms": 1793031000640,
+      "last_seen_ms": 1793031600427,
       "last_ready_alert_ms": 0
     }
   }
