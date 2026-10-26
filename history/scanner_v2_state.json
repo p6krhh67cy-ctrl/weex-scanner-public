@@ -1,140 +1,86 @@
 {
-  "updated_at_ms": 1793030419868,
+  "updated_at_ms": 1793032219035,
   "symbols": {
-    "IDOLUSDT": {
+    "USELESSUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 88.0,
-      "confidence": 89.0,
-      "dump_score": 0,
-      "price": 0.007769,
-      "last_seen_ms": 1793030419868
-    },
-    "0GUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 88.0,
+      "timing": 80.0,
       "confidence": 81.0,
       "dump_score": 0,
-      "price": 0.2046,
-      "last_seen_ms": 1793030419868
-    },
-    "SENTUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 62.0,
-      "confidence": 73.0,
-      "dump_score": 0,
-      "price": 0.02063,
-      "last_seen_ms": 1793030419868
-    },
-    "PEOPLEUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 62.0,
-      "confidence": 68.0,
-      "dump_score": 0,
-      "price": 0.007542,
-      "last_seen_ms": 1793030419868
+      "price": 0.16017,
+      "last_seen_ms": 1793032219035
     },
     "VVVUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
       "timing": 80.0,
-      "confidence": 62.0,
+      "confidence": 70.0,
       "dump_score": 0,
-      "price": 25.192,
-      "last_seen_ms": 1793030419868
+      "price": 24.803,
+      "last_seen_ms": 1793032219035
     },
-    "JUPUSDT": {
+    "PEOPLEUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 80.0,
+      "timing": 72.0,
+      "confidence": 68.0,
+      "dump_score": 0,
+      "price": 0.007519,
+      "last_seen_ms": 1793032219035
+    },
+    "SENTUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 72.0,
       "confidence": 73.0,
       "dump_score": 0,
-      "price": 0.282,
-      "last_seen_ms": 1793030419868
+      "price": 0.02048,
+      "last_seen_ms": 1793032219035
     },
     "1000PEPEUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 72.0,
-      "confidence": 67.0,
+      "timing": 70.0,
+      "confidence": 61.0,
       "dump_score": 0,
-      "price": 0.00437,
-      "last_seen_ms": 1793030419868
-    },
-    "NIULAIUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 80.0,
-      "confidence": 81.0,
-      "dump_score": 0,
-      "price": 0.05383,
-      "last_seen_ms": 1793030419868
-    },
-    "MUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 78.0,
-      "confidence": 57.0,
-      "dump_score": 0,
-      "price": 0.9643,
-      "last_seen_ms": 1793030419868
-    },
-    "NEARUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 80.0,
-      "confidence": 59.0,
-      "dump_score": 0,
-      "price": 4.577,
-      "last_seen_ms": 1793030419868
+      "price": 0.0043732,
+      "last_seen_ms": 1793032219035
     },
     "REZUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
-      "timing": 58.0,
-      "confidence": 63.0,
+      "timing": 50.0,
+      "confidence": 61.0,
       "dump_score": 65,
-      "price": 0.004501,
-      "last_seen_ms": 1793030419868
+      "price": 0.004525,
+      "last_seen_ms": 1793032219035
     },
     "ACUUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 50.0,
+      "timing": 42.0,
       "confidence": 70.0,
       "dump_score": 0,
-      "price": 0.11221,
-      "last_seen_ms": 1793030419868
+      "price": 0.11231,
+      "last_seen_ms": 1793032219035
     },
     "ERAUSDT": {
+      "cycle_state": "TRACK",
+      "lane": "NONE",
+      "timing": 60.0,
+      "confidence": 63.0,
+      "dump_score": 0,
+      "price": 0.08625,
+      "last_seen_ms": 1793032219035
+    },
+    "CVXUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
-      "timing": 50.0,
-      "confidence": 63.0,
+      "timing": 68.0,
+      "confidence": 69.0,
       "dump_score": 65,
-      "price": 0.0872,
-      "last_seen_ms": 1793030419868
-    },
-    "SQDUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 78.0,
-      "confidence": 63.0,
-      "dump_score": 0,
-      "price": 0.02008,
-      "last_seen_ms": 1793030419868
-    },
-    "LAUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 50.0,
-      "confidence": 50.0,
-      "dump_score": 0,
-      "price": 0.05931,
-      "last_seen_ms": 1793030419868
+      "price": 2.479,
+      "last_seen_ms": 1793032219035
     },
     "STBLUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -142,62 +88,71 @@
       "timing": 68.0,
       "confidence": 72.0,
       "dump_score": 65,
-      "price": 0.02705,
-      "last_seen_ms": 1793030419868
+      "price": 0.02706,
+      "last_seen_ms": 1793032219035
+    },
+    "ZECUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 68.0,
+      "confidence": 55.0,
+      "dump_score": 0,
+      "price": 1234.18,
+      "last_seen_ms": 1793032219035
+    },
+    "MUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 46.0,
+      "confidence": 53.0,
+      "dump_score": 0,
+      "price": 0.9544,
+      "last_seen_ms": 1793032219035
     },
     "EDGEUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
       "timing": 76.0,
-      "confidence": 54.0,
+      "confidence": 50.0,
       "dump_score": 0,
-      "price": 0.3297,
-      "last_seen_ms": 1793030419868
+      "price": 0.3283,
+      "last_seen_ms": 1793032219035
     },
-    "PUMPUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 60.0,
-      "confidence": 42.0,
-      "dump_score": 0,
-      "price": 0.004327,
-      "last_seen_ms": 1793030419868
+    "BEAMXUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "timing": 78.0,
+      "confidence": 36.0,
+      "dump_score": 30,
+      "price": 0.003355,
+      "last_seen_ms": 1793032219035
     },
     "AXTIUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 42.0,
+      "timing": 52.0,
       "confidence": 32.0,
       "dump_score": 0,
-      "price": 55.91,
-      "last_seen_ms": 1793030419868
+      "price": 56.45,
+      "last_seen_ms": 1793032219035
     },
     "FOLKSUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
       "timing": 46.0,
-      "confidence": 71.0,
+      "confidence": 82.0,
       "dump_score": 0,
-      "price": 2.381,
-      "last_seen_ms": 1793030419868
+      "price": 2.356,
+      "last_seen_ms": 1793032219035
     },
-    "WDCUSDT": {
+    "PLAYUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 42.0,
-      "confidence": 45.0,
+      "timing": 68.0,
+      "confidence": 51.0,
       "dump_score": 0,
-      "price": 354.38,
-      "last_seen_ms": 1793030419868
-    },
-    "QNTUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "timing": 86.0,
-      "confidence": 50.0,
-      "dump_score": 65,
-      "price": 210.3,
-      "last_seen_ms": 1793030419868
+      "price": 0.01673,
+      "last_seen_ms": 1793032219035
     },
     "JCTUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -205,35 +160,26 @@
       "timing": 20.0,
       "confidence": 31.0,
       "dump_score": 65,
-      "price": 0.006927,
-      "last_seen_ms": 1793030419868
+      "price": 0.006931,
+      "last_seen_ms": 1793032219035
     },
     "LIGHTUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "timing": 20.0,
-      "confidence": 22.0,
-      "dump_score": 65,
-      "price": 0.285,
-      "last_seen_ms": 1793030419868
-    },
-    "AINUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
+      "cycle_state": "TRACK",
       "lane": "NONE",
-      "timing": 30.0,
-      "confidence": 24.0,
+      "timing": 28.0,
+      "confidence": 27.0,
       "dump_score": 0,
-      "price": 0.04726,
-      "last_seen_ms": 1793030419868
+      "price": 0.2804,
+      "last_seen_ms": 1793032219035
     },
     "CHIPUSDT": {
       "cycle_state": "TRACK",
       "lane": "NONE",
-      "timing": 30.0,
-      "confidence": 0.0,
+      "timing": 38.0,
+      "confidence": 10.0,
       "dump_score": 0,
-      "price": 0.05153,
-      "last_seen_ms": 1793030419868
+      "price": 0.05185,
+      "last_seen_ms": 1793032219035
     }
   }
 }
