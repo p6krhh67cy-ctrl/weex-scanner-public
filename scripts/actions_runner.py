@@ -10,7 +10,7 @@ Path('history').mkdir(exist_ok=True)
 os.environ.setdefault('SCANNER_STATE_PATH',str(ROOT/'history'/'scanner_v2_state.json'))
 os.environ.setdefault('TURN_MONITOR_STATE_PATH',str(ROOT/'history'/'turn_monitor_state.json'))
 REQUESTED=os.environ.get('SCANNER_RUN_MODE','full').strip().lower()
-OWNER_GENERATION='20261026-v6'
+OWNER_GENERATION='20261026-v7'
 
 if os.environ.get('SCANNER_OWNER_GENERATION') != OWNER_GENERATION:
     print(f"STALE_SCANNER_RUN_BLOCKED owner={os.environ.get('SCANNER_OWNER_GENERATION')!r} expected={OWNER_GENERATION!r}", flush=True)
