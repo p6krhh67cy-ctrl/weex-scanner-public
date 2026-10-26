@@ -1,29 +1,31 @@
-name: WEEX Scanner Watchdog
+name: WEEX Scanner Schedule
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/smoke.yml'
+    inputs:
+      mode:
+        description: 'full or monitor; blank = auto from Warsaw time'
+        required: false
+        default: ''
+  schedule:
+    - cron: '*/10 7-21 * * *'
 
 permissions:
   contents: write
-  actions: write
 
 concurrency:
-  group: weex-scanner-watchdog-v3
-  cancel-in-progress: true
+  group: weex-scanner-cycle
+  cancel-in-progress: false
 
 jobs:
-  scanner-loop:
+  scanner-cycle:
     runs-on: ubuntu-latest
-    timeout-minutes: 355
+    timeout-minutes: 20
     env:
       ALERTS_ENABLED: 'true'
       SCANNER_STATE_PATH: ./history/scanner_v2_state.json
       TURN_MONITOR_STATE_PATH: ./history/turn_monitor_state.json
-      SCANNER_OWNER_GENERATION: '20261025-v4'
+      SCANNER_OWNER_GENERATION: '20261026-v5'
       TZ: Europe/Warsaw
     steps:
       - uses: actions/checkout@v4
@@ -32,58 +34,40 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run continuous scanner cycles
+      - name: Resolve Warsaw slot and run one scanner cycle
         shell: bash
-        run: |
-          set +e
-          git config user.name 'weex-scanner-bot'
-          git config user.email 'scanner@users.noreply.github.com'
-          END_EPOCH=$(( $(date +%s) + 20400 ))
-          while (( $(date +%s) < END_EPOCH )); do
-            MINUTE=$(TZ=Europe/Warsaw date +%M); SECOND=$(TZ=Europe/Warsaw date +%S)
-            M=$((10#$MINUTE)); S=$((10#$SECOND)); REM=$((M % 10))
-            if (( REM != 0 || S > 5 )); then
-              WAIT=$(((10 - REM) * 60 - S)); if (( WAIT <= 0 || WAIT > 600 )); then WAIT=1; fi
-              echo "Waiting ${WAIT}s for next exact Warsaw slot"; sleep "$WAIT"
-            fi
-
-            git pull --rebase origin main || true
-            HOUR=$(TZ=Europe/Warsaw date +%H); MINUTE=$(TZ=Europe/Warsaw date +%M)
-            H=$((10#$HOUR)); M=$((10#$MINUTE)); NOW=$((H * 60 + M))
-            echo "Executing Warsaw slot $(printf '%02d:%02d' "$H" "$M") at $(TZ=Europe/Warsaw date '+%F %T %Z')"
-
-            # FULL: 08:00, 08:30 ... 21:30, 22:00.
-            # MONITOR: every 10 minutes between FULL slots and, after the final FULL,
-            # 22:10 ... 22:50. No scanner work from 23:00 until 08:00.
-            if (( NOW >= 480 && NOW <= 1320 && (M == 0 || M == 30) )); then
-              export SCANNER_RUN_MODE=full
-            elif (( NOW >= 480 && NOW < 1380 )); then
-              export SCANNER_RUN_MODE=monitor
-            else
-              unset SCANNER_RUN_MODE
-            fi
-
-            if [[ -n "${SCANNER_RUN_MODE:-}" ]]; then
-              echo "Mode: $SCANNER_RUN_MODE"
-              python scripts/actions_runner.py || echo "Scanner cycle failed; continuing watchdog"
-
-              git add history/scanner_v2_state.json history/turn_monitor_state.json history/scanner_cycles.jsonl
-              if ! git diff --cached --quiet; then
-                git commit -m "Archive scanner slot $(TZ=Europe/Warsaw date '+%F %H:%M') [skip ci]"
-                git pull --rebase origin main || true
-                git push origin HEAD:main || true
-              fi
-            else
-              echo "Outside scanner window Europe/Warsaw; scanner idle"
-            fi
-            sleep 5
-          done
-      - name: Hand off to next watchdog run
-        if: ${{ !cancelled() }}
         env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
+          REQUESTED_MODE: ${{ github.event.inputs.mode }}
         run: |
           set -euo pipefail
-          curl --fail-with-body -L -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/${{ github.repository }}/actions/workflows/smoke.yml/dispatches" -d '{"ref":"main"}'
-          echo "SUCCESSOR_QUEUED"
+          git config user.name 'weex-scanner-bot'
+          git config user.email 'scanner@users.noreply.github.com'
+
+          HOUR=$(TZ=Europe/Warsaw date +%H)
+          MINUTE=$(TZ=Europe/Warsaw date +%M)
+          H=$((10#$HOUR)); M=$((10#$MINUTE)); NOW=$((H * 60 + M))
+          MODE="${REQUESTED_MODE:-}"
+
+          if [[ "$MODE" != "full" && "$MODE" != "monitor" ]]; then
+            if (( NOW >= 480 && NOW <= 1320 && (M == 0 || M == 30) )); then
+              MODE=full
+            elif (( NOW >= 480 && NOW < 1380 )); then
+              MODE=monitor
+            else
+              echo "Outside 08:00-23:00 Europe/Warsaw; no scanner cycle"
+              exit 0
+            fi
+          fi
+
+          # A scheduled run may start a few minutes late; classify by the intended
+          # 10-minute Warsaw slot rather than requiring second-level precision.
+          export SCANNER_RUN_MODE="$MODE"
+          echo "Warsaw $(TZ=Europe/Warsaw date '+%F %T %Z') mode=$SCANNER_RUN_MODE"
+          python scripts/actions_runner.py
+
+          git add history/scanner_v2_state.json history/turn_monitor_state.json history/scanner_cycles.jsonl
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive scanner slot $(TZ=Europe/Warsaw date '+%F %H:%M') [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
