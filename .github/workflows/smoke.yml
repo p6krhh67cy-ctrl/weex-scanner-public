@@ -7,6 +7,10 @@ on:
         description: 'full or monitor; blank = auto from Warsaw time'
         required: false
         default: ''
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/smoke.yml'
   schedule:
     - cron: '*/10 7-21 * * *'
 
@@ -15,7 +19,7 @@ permissions:
 
 concurrency:
   group: weex-scanner-cycle
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   scanner-cycle:
@@ -25,7 +29,7 @@ jobs:
       ALERTS_ENABLED: 'true'
       SCANNER_STATE_PATH: ./history/scanner_v2_state.json
       TURN_MONITOR_STATE_PATH: ./history/turn_monitor_state.json
-      SCANNER_OWNER_GENERATION: '20261026-v5'
+      SCANNER_OWNER_GENERATION: '20261026-v6'
       TZ: Europe/Warsaw
     steps:
       - uses: actions/checkout@v4
@@ -38,6 +42,7 @@ jobs:
         shell: bash
         env:
           REQUESTED_MODE: ${{ github.event.inputs.mode }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           set -euo pipefail
           git config user.name 'weex-scanner-bot'
@@ -48,8 +53,12 @@ jobs:
           H=$((10#$HOUR)); M=$((10#$MINUTE)); NOW=$((H * 60 + M))
           MODE="${REQUESTED_MODE:-}"
 
-          if [[ "$MODE" != "full" && "$MODE" != "monitor" ]]; then
-            if (( NOW >= 480 && NOW <= 1320 && (M == 0 || M == 30) )); then
+          # A workflow-code deployment is an explicit recovery action: run FULL now
+          # so a broken scheduler cannot leave the trading day blind.
+          if [[ "$EVENT_NAME" == "push" ]]; then
+            MODE=full
+          elif [[ "$MODE" != "full" && "$MODE" != "monitor" ]]; then
+            if (( NOW >= 480 && NOW <= 1320 && (M < 5 || (M >= 30 && M < 35)) )); then
               MODE=full
             elif (( NOW >= 480 && NOW < 1380 )); then
               MODE=monitor
@@ -59,15 +68,13 @@ jobs:
             fi
           fi
 
-          # A scheduled run may start a few minutes late; classify by the intended
-          # 10-minute Warsaw slot rather than requiring second-level precision.
           export SCANNER_RUN_MODE="$MODE"
-          echo "Warsaw $(TZ=Europe/Warsaw date '+%F %T %Z') mode=$SCANNER_RUN_MODE"
+          echo "Warsaw $(TZ=Europe/Warsaw date '+%F %T %Z') event=$EVENT_NAME mode=$SCANNER_RUN_MODE"
           python scripts/actions_runner.py
 
           git add history/scanner_v2_state.json history/turn_monitor_state.json history/scanner_cycles.jsonl
           if ! git diff --cached --quiet; then
-            git commit -m "Archive scanner slot $(TZ=Europe/Warsaw date '+%F %H:%M') [skip ci]"
+            git commit -m "Archive scanner cycle $(TZ=Europe/Warsaw date '+%F %H:%M') [skip ci]"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
