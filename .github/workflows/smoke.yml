@@ -47,14 +47,10 @@ jobs:
           set -euo pipefail
           git config user.name 'weex-scanner-bot'
           git config user.email 'scanner@users.noreply.github.com'
-
           HOUR=$(TZ=Europe/Warsaw date +%H)
           MINUTE=$(TZ=Europe/Warsaw date +%M)
           H=$((10#$HOUR)); M=$((10#$MINUTE)); NOW=$((H * 60 + M))
           MODE="${REQUESTED_MODE:-}"
-
-          # A workflow-code deployment is an explicit recovery action: run FULL now
-          # so a broken scheduler cannot leave the trading day blind.
           if [[ "$EVENT_NAME" == "push" ]]; then
             MODE=full
           elif [[ "$MODE" != "full" && "$MODE" != "monitor" ]]; then
@@ -67,11 +63,9 @@ jobs:
               exit 0
             fi
           fi
-
           export SCANNER_RUN_MODE="$MODE"
           echo "Warsaw $(TZ=Europe/Warsaw date '+%F %T %Z') event=$EVENT_NAME mode=$SCANNER_RUN_MODE"
           python scripts/actions_runner.py
-
           git add history/scanner_v2_state.json history/turn_monitor_state.json history/scanner_cycles.jsonl
           if ! git diff --cached --quiet; then
             git commit -m "Archive scanner cycle $(TZ=Europe/Warsaw date '+%F %H:%M') [skip ci]"
