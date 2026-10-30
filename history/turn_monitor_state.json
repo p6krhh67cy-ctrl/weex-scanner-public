@@ -1,4 +1,80 @@
 {
-  "updated_at_ms": 1793380800633,
-  "symbols": {}
+  "updated_at_ms": 1793382000486,
+  "symbols": {
+    "AINUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 20.0,
+      "confidence": 16.0,
+      "dump_score": 35,
+      "price": 0.17407,
+      "first_watch_ms": 1793382000486,
+      "watch_reset_ms": 1793382000486,
+      "watch_high_price": 0.17407,
+      "multi_day_hold": true,
+      "last_seen_ms": 1793382000486,
+      "last_ready_alert_ms": 0
+    },
+    "APRUSDT": {
+      "cycle_state": "WATCH_RETEST",
+      "lane": "RETEST",
+      "ready": false,
+      "timing": 78.0,
+      "confidence": 60.0,
+      "dump_score": 65,
+      "price": 0.05633,
+      "first_watch_ms": 1793382000486,
+      "watch_reset_ms": 1793382000486,
+      "watch_high_price": 0.05633,
+      "multi_day_hold": false,
+      "last_seen_ms": 1793382000486,
+      "last_ready_alert_ms": 0
+    },
+    "ONUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 36.0,
+      "confidence": 21.0,
+      "dump_score": 35,
+      "price": 0.2091,
+      "first_watch_ms": 1793382000486,
+      "watch_reset_ms": 1793382000486,
+      "watch_high_price": 0.2091,
+      "multi_day_hold": false,
+      "last_seen_ms": 1793382000486,
+      "last_ready_alert_ms": 0
+    },
+    "BEATUSDT": {
+      "cycle_state": "WATCH_RETEST",
+      "lane": "RETEST",
+      "ready": false,
+      "timing": 68.0,
+      "confidence": 58.0,
+      "dump_score": 35,
+      "price": 0.10495,
+      "first_watch_ms": 1793382000486,
+      "watch_reset_ms": 1793382000486,
+      "watch_high_price": 0.10495,
+      "multi_day_hold": false,
+      "last_seen_ms": 1793382000486,
+      "last_ready_alert_ms": 0
+    },
+    "HYPEUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 86.0,
+      "confidence": 56.0,
+      "dump_score": 65,
+      "price": 90.93,
+      "first_watch_ms": 1793382000486,
+      "watch_reset_ms": 1793382000486,
+      "watch_high_price": 90.93,
+      "multi_day_hold": true,
+      "last_seen_ms": 1793382000486,
+      "last_ready_alert_ms": 0
+    }
+  }
 }
