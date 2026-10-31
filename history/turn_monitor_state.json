@@ -1,56 +1,56 @@
 {
-  "updated_at_ms": 1793481600394,
+  "updated_at_ms": 1793482201194,
   "symbols": {
     "UAIUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 86.0,
-      "confidence": 49.0,
+      "timing": 58.0,
+      "confidence": 41.0,
       "dump_score": 65,
       "price": 0.3051,
       "first_watch_ms": 1793454001191,
       "watch_reset_ms": 1793466600685,
       "watch_high_price": 0.3194,
       "multi_day_hold": true,
-      "last_seen_ms": 1793481600394,
+      "last_seen_ms": 1793482201194,
       "last_ready_alert_ms": 0
     },
     "NIULAIUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 68.0,
-      "confidence": 44.0,
-      "dump_score": 65,
+      "timing": 42.0,
+      "confidence": 22.0,
+      "dump_score": 30,
       "price": 0.06098,
       "first_watch_ms": 1793479201073,
       "watch_reset_ms": 1793481001183,
       "watch_high_price": 0.06098,
       "multi_day_hold": false,
-      "last_seen_ms": 1793481600394,
+      "last_seen_ms": 1793482201194,
       "last_ready_alert_ms": 0
     },
     "HANAUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 66.0,
-      "confidence": 76.0,
+      "timing": 76.0,
+      "confidence": 74.0,
       "dump_score": 65,
       "price": 0.01591,
       "first_watch_ms": 1793446800608,
       "watch_reset_ms": 1793454001191,
       "watch_high_price": 0.016296,
       "multi_day_hold": false,
-      "last_seen_ms": 1793481600394,
+      "last_seen_ms": 1793482201194,
       "last_ready_alert_ms": 0
     },
     "EDGEUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 68.0,
+      "timing": 58.0,
       "confidence": 59.0,
       "dump_score": 65,
       "price": 0.3434,
@@ -58,7 +58,7 @@
       "watch_reset_ms": 1793464801269,
       "watch_high_price": 0.3568,
       "multi_day_hold": false,
-      "last_seen_ms": 1793481600394,
+      "last_seen_ms": 1793482201194,
       "last_ready_alert_ms": 0
     },
     "SWARMSUSDT": {
@@ -73,7 +73,7 @@
       "watch_reset_ms": 1793461200350,
       "watch_high_price": 0.006748,
       "multi_day_hold": true,
-      "last_seen_ms": 1793481600394,
+      "last_seen_ms": 1793482201194,
       "last_ready_alert_ms": 0
     }
   }
