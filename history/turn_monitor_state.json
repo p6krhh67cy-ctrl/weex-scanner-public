@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1793545801071,
+  "updated_at_ms": 1793546401016,
   "symbols": {
     "AINUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
       "timing": 68.0,
-      "confidence": 51.0,
+      "confidence": 55.0,
       "dump_score": 65,
       "price": 0.27888,
       "first_watch_ms": 1793527800737,
       "watch_reset_ms": 1793535000751,
       "watch_high_price": 0.28248,
       "multi_day_hold": true,
-      "last_seen_ms": 1793545801071,
+      "last_seen_ms": 1793546401016,
       "last_ready_alert_ms": 0
     },
     "APRUSDT": {
@@ -28,7 +28,7 @@
       "watch_reset_ms": 1793538601255,
       "watch_high_price": 0.07408,
       "multi_day_hold": true,
-      "last_seen_ms": 1793545801071,
+      "last_seen_ms": 1793546401016,
       "last_ready_alert_ms": 0
     },
     "HANAUSDT": {
@@ -36,21 +36,21 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 60.0,
-      "confidence": 61.0,
+      "confidence": 53.0,
       "dump_score": 65,
       "price": 0.0155,
       "first_watch_ms": 1793527800737,
       "watch_reset_ms": 1793538601255,
       "watch_high_price": 0.015751,
       "multi_day_hold": true,
-      "last_seen_ms": 1793545801071,
+      "last_seen_ms": 1793546401016,
       "last_ready_alert_ms": 0
     },
     "ARIAUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 58.0,
+      "timing": 78.0,
       "confidence": 49.0,
       "dump_score": 65,
       "price": 0.08364,
@@ -58,7 +58,7 @@
       "watch_reset_ms": 1793545801071,
       "watch_high_price": 0.08364,
       "multi_day_hold": false,
-      "last_seen_ms": 1793545801071,
+      "last_seen_ms": 1793546401016,
       "last_ready_alert_ms": 0
     },
     "POWRUSDT": {
@@ -66,14 +66,14 @@
       "lane": "RETEST",
       "ready": false,
       "timing": 46.0,
-      "confidence": 55.0,
-      "dump_score": 35,
+      "confidence": 61.0,
+      "dump_score": 65,
       "price": 0.05885,
       "first_watch_ms": 1793527800737,
       "watch_reset_ms": 1793531400427,
       "watch_high_price": 0.06736,
       "multi_day_hold": false,
-      "last_seen_ms": 1793545801071,
+      "last_seen_ms": 1793546401016,
       "last_ready_alert_ms": 0
     },
     "ESPORTSUSDT": {
@@ -88,7 +88,7 @@
       "watch_reset_ms": 1793545801071,
       "watch_high_price": 0.017275,
       "multi_day_hold": false,
-      "last_seen_ms": 1793545801071,
+      "last_seen_ms": 1793546401016,
       "last_ready_alert_ms": 0
     }
   }
