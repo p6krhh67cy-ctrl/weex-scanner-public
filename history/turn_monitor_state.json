@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1793532000689,
+  "updated_at_ms": 1793533201301,
   "symbols": {
     "AINUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 52.0,
+      "timing": 42.0,
       "confidence": 24.0,
       "dump_score": 30,
-      "price": 0.2745,
+      "price": 0.27282,
       "first_watch_ms": 1793527800737,
       "watch_reset_ms": 1793531400427,
       "watch_high_price": 0.2745,
       "multi_day_hold": true,
-      "last_seen_ms": 1793532000689,
+      "last_seen_ms": 1793533201301,
       "last_ready_alert_ms": 0
     },
     "ESPORTSUSDT": {
@@ -23,12 +23,12 @@
       "timing": 78.0,
       "confidence": 40.0,
       "dump_score": 30,
-      "price": 0.01288,
+      "price": 0.012849,
       "first_watch_ms": 1793531400427,
       "watch_reset_ms": 1793531400427,
       "watch_high_price": 0.01288,
       "multi_day_hold": true,
-      "last_seen_ms": 1793532000689,
+      "last_seen_ms": 1793533201301,
       "last_ready_alert_ms": 0
     },
     "HANAUSDT": {
@@ -38,12 +38,12 @@
       "timing": 68.0,
       "confidence": 66.0,
       "dump_score": 65,
-      "price": 0.01536,
+      "price": 0.015378,
       "first_watch_ms": 1793527800737,
       "watch_reset_ms": 1793527800737,
       "watch_high_price": 0.015512,
       "multi_day_hold": true,
-      "last_seen_ms": 1793532000689,
+      "last_seen_ms": 1793533201301,
       "last_ready_alert_ms": 0
     },
     "APRUSDT": {
@@ -51,29 +51,29 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 20.0,
-      "confidence": 4.0,
-      "dump_score": 30,
-      "price": 0.06188,
+      "confidence": 0.0,
+      "dump_score": 0,
+      "price": 0.06406,
       "first_watch_ms": 1793527800737,
-      "watch_reset_ms": 1793531400427,
-      "watch_high_price": 0.06188,
+      "watch_reset_ms": 1793533201301,
+      "watch_high_price": 0.06406,
       "multi_day_hold": true,
-      "last_seen_ms": 1793532000689,
+      "last_seen_ms": 1793533201301,
       "last_ready_alert_ms": 0
     },
     "POWRUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 20.0,
-      "confidence": 4.0,
+      "timing": 42.0,
+      "confidence": 30.0,
       "dump_score": 30,
-      "price": 0.06736,
+      "price": 0.06664,
       "first_watch_ms": 1793527800737,
       "watch_reset_ms": 1793531400427,
       "watch_high_price": 0.06736,
       "multi_day_hold": true,
-      "last_seen_ms": 1793532000689,
+      "last_seen_ms": 1793533201301,
       "last_ready_alert_ms": 0
     }
   }
