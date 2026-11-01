@@ -1,4 +1,95 @@
 {
-  "updated_at_ms": 1793526601355,
-  "symbols": {}
+  "updated_at_ms": 1793527800737,
+  "symbols": {
+    "AINUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 60.0,
+      "confidence": 30.0,
+      "dump_score": 65,
+      "price": 0.27208,
+      "first_watch_ms": 1793527800737,
+      "watch_reset_ms": 1793527800737,
+      "watch_high_price": 0.27208,
+      "multi_day_hold": true,
+      "last_seen_ms": 1793527800737,
+      "last_ready_alert_ms": 0
+    },
+    "APRUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 52.0,
+      "confidence": 32.0,
+      "dump_score": 30,
+      "price": 0.06072,
+      "first_watch_ms": 1793527800737,
+      "watch_reset_ms": 1793527800737,
+      "watch_high_price": 0.06072,
+      "multi_day_hold": true,
+      "last_seen_ms": 1793527800737,
+      "last_ready_alert_ms": 0
+    },
+    "GUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 70.0,
+      "confidence": 40.0,
+      "dump_score": 30,
+      "price": 0.003929,
+      "first_watch_ms": 1793527800737,
+      "watch_reset_ms": 1793527800737,
+      "watch_high_price": 0.003929,
+      "multi_day_hold": true,
+      "last_seen_ms": 1793527800737,
+      "last_ready_alert_ms": 0
+    },
+    "HANAUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 42.0,
+      "confidence": 46.0,
+      "dump_score": 65,
+      "price": 0.015512,
+      "first_watch_ms": 1793527800737,
+      "watch_reset_ms": 1793527800737,
+      "watch_high_price": 0.015512,
+      "multi_day_hold": true,
+      "last_seen_ms": 1793527800737,
+      "last_ready_alert_ms": 0
+    },
+    "POWRUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 42.0,
+      "confidence": 31.0,
+      "dump_score": 30,
+      "price": 0.06578,
+      "first_watch_ms": 1793527800737,
+      "watch_reset_ms": 1793527800737,
+      "watch_high_price": 0.06578,
+      "multi_day_hold": true,
+      "last_seen_ms": 1793527800737,
+      "last_ready_alert_ms": 0
+    },
+    "ARIAUSDT": {
+      "cycle_state": "WATCH_RETEST",
+      "lane": "RETEST",
+      "ready": false,
+      "timing": 72.0,
+      "confidence": 69.0,
+      "dump_score": 65,
+      "price": 0.08421,
+      "first_watch_ms": 1793527800737,
+      "watch_reset_ms": 1793527800737,
+      "watch_high_price": 0.08421,
+      "multi_day_hold": false,
+      "last_seen_ms": 1793527800737,
+      "last_ready_alert_ms": 0
+    }
+  }
 }
