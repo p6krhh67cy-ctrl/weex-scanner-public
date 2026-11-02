@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1793614201126,
+  "updated_at_ms": 1793614800875,
   "symbols": {
     "IDOLUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 20.0,
-      "confidence": 35.0,
+      "timing": 30.0,
+      "confidence": 41.0,
       "dump_score": 30,
       "price": 0.026492,
       "first_watch_ms": 1793612401226,
       "watch_reset_ms": 1793614201126,
       "watch_high_price": 0.026492,
       "multi_day_hold": false,
-      "last_seen_ms": 1793614201126,
+      "last_seen_ms": 1793614800875,
       "last_ready_alert_ms": 0
     },
     "TAGUSDT": {
@@ -28,7 +28,7 @@
       "watch_reset_ms": 1793614201126,
       "watch_high_price": 0.0008002,
       "multi_day_hold": true,
-      "last_seen_ms": 1793614201126,
+      "last_seen_ms": 1793614800875,
       "last_ready_alert_ms": 0
     },
     "MAGMAUSDT": {
@@ -43,7 +43,7 @@
       "watch_reset_ms": 1793612401226,
       "watch_high_price": 0.45032,
       "multi_day_hold": false,
-      "last_seen_ms": 1793614201126,
+      "last_seen_ms": 1793614800875,
       "last_ready_alert_ms": 0
     }
   }
