@@ -1,21 +1,6 @@
 {
-  "updated_at_ms": 1793617800723,
+  "updated_at_ms": 1793618401313,
   "symbols": {
-    "IDOLUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "ready": false,
-      "timing": 30.0,
-      "confidence": 41.0,
-      "dump_score": 30,
-      "price": 0.026231,
-      "first_watch_ms": 1793612401226,
-      "watch_reset_ms": 1793614201126,
-      "watch_high_price": 0.026492,
-      "multi_day_hold": false,
-      "last_seen_ms": 1793617800723,
-      "last_ready_alert_ms": 0
-    },
     "TAGUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
@@ -28,7 +13,7 @@
       "watch_reset_ms": 1793616001276,
       "watch_high_price": 0.0008043,
       "multi_day_hold": true,
-      "last_seen_ms": 1793617800723,
+      "last_seen_ms": 1793618401313,
       "last_ready_alert_ms": 0
     },
     "LYNUSDT": {
@@ -42,38 +27,23 @@
       "first_watch_ms": 1793617800723,
       "watch_reset_ms": 1793617800723,
       "watch_high_price": 0.01928,
-      "multi_day_hold": true,
-      "last_seen_ms": 1793617800723,
+      "multi_day_hold": false,
+      "last_seen_ms": 1793618401313,
       "last_ready_alert_ms": 0
     },
     "MAGMAUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 88.0,
-      "confidence": 71.0,
+      "timing": 46.0,
+      "confidence": 67.0,
       "dump_score": 65,
       "price": 0.44751,
       "first_watch_ms": 1793612401226,
       "watch_reset_ms": 1793612401226,
       "watch_high_price": 0.45032,
       "multi_day_hold": false,
-      "last_seen_ms": 1793617800723,
-      "last_ready_alert_ms": 0
-    },
-    "SIRENUSDT": {
-      "cycle_state": "WATCH_RETEST",
-      "lane": "RETEST",
-      "ready": false,
-      "timing": 86.0,
-      "confidence": 48.0,
-      "dump_score": 65,
-      "price": 0.0255,
-      "first_watch_ms": 1793616001276,
-      "watch_reset_ms": 1793616001276,
-      "watch_high_price": 0.0255,
-      "multi_day_hold": false,
-      "last_seen_ms": 1793617800723,
+      "last_seen_ms": 1793618401313,
       "last_ready_alert_ms": 0
     }
   }
