@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1793612401226,
+  "updated_at_ms": 1793613000786,
   "symbols": {
     "IDOLUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
       "timing": 20.0,
-      "confidence": 28.0,
+      "confidence": 34.0,
       "dump_score": 30,
       "price": 0.026275,
       "first_watch_ms": 1793612401226,
       "watch_reset_ms": 1793612401226,
       "watch_high_price": 0.026275,
       "multi_day_hold": false,
-      "last_seen_ms": 1793612401226,
+      "last_seen_ms": 1793613000786,
       "last_ready_alert_ms": 0
     },
     "VRTUSDT": {
@@ -22,13 +22,13 @@
       "ready": false,
       "timing": 50.0,
       "confidence": 28.0,
-      "dump_score": 65,
+      "dump_score": 30,
       "price": 239.83,
       "first_watch_ms": 1793612401226,
       "watch_reset_ms": 1793612401226,
       "watch_high_price": 239.83,
       "multi_day_hold": true,
-      "last_seen_ms": 1793612401226,
+      "last_seen_ms": 1793613000786,
       "last_ready_alert_ms": 0
     },
     "MAGMAUSDT": {
@@ -36,14 +36,14 @@
       "lane": "RETEST",
       "ready": false,
       "timing": 78.0,
-      "confidence": 65.0,
+      "confidence": 73.0,
       "dump_score": 65,
       "price": 0.45009,
       "first_watch_ms": 1793612401226,
       "watch_reset_ms": 1793612401226,
       "watch_high_price": 0.45009,
       "multi_day_hold": false,
-      "last_seen_ms": 1793612401226,
+      "last_seen_ms": 1793613000786,
       "last_ready_alert_ms": 0
     }
   }
