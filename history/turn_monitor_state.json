@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1793821201100,
+  "updated_at_ms": 1793821801007,
   "symbols": {
     "AINUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
-      "confidence": 34.0,
+      "timing": 52.0,
+      "confidence": 40.0,
       "dump_score": 30,
       "price": 0.31732,
       "first_watch_ms": 1793819401253,
       "watch_reset_ms": 1793821201100,
       "watch_high_price": 0.31732,
       "multi_day_hold": true,
-      "last_seen_ms": 1793821201100,
+      "last_seen_ms": 1793821801007,
       "last_ready_alert_ms": 0
     },
     "MRNAUSDT": {
@@ -21,21 +21,21 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 86.0,
-      "confidence": 50.0,
+      "confidence": 44.0,
       "dump_score": 65,
       "price": 245.36,
       "first_watch_ms": 1793819401253,
       "watch_reset_ms": 1793819401253,
       "watch_high_price": 245.99,
       "multi_day_hold": true,
-      "last_seen_ms": 1793821201100,
+      "last_seen_ms": 1793821801007,
       "last_ready_alert_ms": 0
     },
     "BEATUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 70.0,
+      "timing": 80.0,
       "confidence": 84.0,
       "dump_score": 65,
       "price": 0.10276,
@@ -43,7 +43,7 @@
       "watch_reset_ms": 1793821201100,
       "watch_high_price": 0.10276,
       "multi_day_hold": false,
-      "last_seen_ms": 1793821201100,
+      "last_seen_ms": 1793821801007,
       "last_ready_alert_ms": 0
     },
     "PIEVERSEUSDT": {
@@ -51,14 +51,14 @@
       "lane": "RETEST",
       "ready": false,
       "timing": 66.0,
-      "confidence": 70.0,
+      "confidence": 69.0,
       "dump_score": 65,
       "price": 1.1882,
       "first_watch_ms": 1793819401253,
       "watch_reset_ms": 1793821201100,
       "watch_high_price": 1.1882,
       "multi_day_hold": false,
-      "last_seen_ms": 1793821201100,
+      "last_seen_ms": 1793821801007,
       "last_ready_alert_ms": 0
     },
     "LAUSDT": {
@@ -73,7 +73,7 @@
       "watch_reset_ms": 1793819401253,
       "watch_high_price": 0.0596,
       "multi_day_hold": false,
-      "last_seen_ms": 1793821201100,
+      "last_seen_ms": 1793821801007,
       "last_ready_alert_ms": 0
     }
   }
