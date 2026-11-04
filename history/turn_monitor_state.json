@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1793783401355,
+  "updated_at_ms": 1793784000581,
   "symbols": {
     "SUPERUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
       "timing": 60.0,
-      "confidence": 40.0,
+      "confidence": 48.0,
       "dump_score": 30,
       "price": 0.17691,
       "first_watch_ms": 1793783401355,
       "watch_reset_ms": 1793783401355,
       "watch_high_price": 0.17691,
       "multi_day_hold": true,
-      "last_seen_ms": 1793783401355,
+      "last_seen_ms": 1793784000581,
       "last_ready_alert_ms": 0
     },
     "HOTUSDT": {
@@ -28,7 +28,7 @@
       "watch_reset_ms": 1793781600708,
       "watch_high_price": 0.0005431,
       "multi_day_hold": false,
-      "last_seen_ms": 1793783401355,
+      "last_seen_ms": 1793784000581,
       "last_ready_alert_ms": 0
     }
   }
