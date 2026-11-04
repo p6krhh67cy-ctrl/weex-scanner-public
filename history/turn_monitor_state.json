@@ -1,34 +1,34 @@
 {
-  "updated_at_ms": 1793792401174,
+  "updated_at_ms": 1793793000677,
   "symbols": {
     "EVAAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 60.0,
-      "confidence": 30.0,
+      "timing": 42.0,
+      "confidence": 36.0,
       "dump_score": 30,
       "price": 1.6399,
       "first_watch_ms": 1793790600936,
       "watch_reset_ms": 1793792401174,
       "watch_high_price": 1.6399,
       "multi_day_hold": true,
-      "last_seen_ms": 1793792401174,
+      "last_seen_ms": 1793793000677,
       "last_ready_alert_ms": 0
     },
     "MRNAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 60.0,
-      "confidence": 55.0,
+      "timing": 42.0,
+      "confidence": 49.0,
       "dump_score": 65,
       "price": 233.22,
       "first_watch_ms": 1793790600936,
       "watch_reset_ms": 1793792401174,
       "watch_high_price": 233.22,
       "multi_day_hold": true,
-      "last_seen_ms": 1793792401174,
+      "last_seen_ms": 1793793000677,
       "last_ready_alert_ms": 0
     },
     "AIOTUSDT": {
@@ -43,14 +43,14 @@
       "watch_reset_ms": 1793792401174,
       "watch_high_price": 0.09151,
       "multi_day_hold": true,
-      "last_seen_ms": 1793792401174,
+      "last_seen_ms": 1793793000677,
       "last_ready_alert_ms": 0
     },
     "BEATUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 62.0,
+      "timing": 72.0,
       "confidence": 54.0,
       "dump_score": 65,
       "price": 0.1035,
@@ -58,7 +58,7 @@
       "watch_reset_ms": 1793790600936,
       "watch_high_price": 0.10421,
       "multi_day_hold": false,
-      "last_seen_ms": 1793792401174,
+      "last_seen_ms": 1793793000677,
       "last_ready_alert_ms": 0
     },
     "LAUSDT": {
@@ -73,14 +73,14 @@
       "watch_reset_ms": 1793790600936,
       "watch_high_price": 0.06053,
       "multi_day_hold": false,
-      "last_seen_ms": 1793792401174,
+      "last_seen_ms": 1793793000677,
       "last_ready_alert_ms": 0
     },
     "AIOUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
+      "timing": 58.0,
       "confidence": 59.0,
       "dump_score": 65,
       "price": 0.03672,
@@ -88,7 +88,7 @@
       "watch_reset_ms": 1793792401174,
       "watch_high_price": 0.03672,
       "multi_day_hold": true,
-      "last_seen_ms": 1793792401174,
+      "last_seen_ms": 1793793000677,
       "last_ready_alert_ms": 0
     },
     "PIEVERSEUSDT": {
@@ -103,7 +103,7 @@
       "watch_reset_ms": 1793790600936,
       "watch_high_price": 1.1624,
       "multi_day_hold": false,
-      "last_seen_ms": 1793792401174,
+      "last_seen_ms": 1793793000677,
       "last_ready_alert_ms": 0
     },
     "TEMUSDT": {
@@ -118,22 +118,22 @@
       "watch_reset_ms": 1793788801286,
       "watch_high_price": 79.75,
       "multi_day_hold": true,
-      "last_seen_ms": 1793792401174,
+      "last_seen_ms": 1793793000677,
       "last_ready_alert_ms": 0
     },
     "MEGAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
-      "confidence": 30.0,
+      "timing": 68.0,
+      "confidence": 32.0,
       "dump_score": 30,
       "price": 0.04872,
       "first_watch_ms": 1793792401174,
       "watch_reset_ms": 1793792401174,
       "watch_high_price": 0.04872,
       "multi_day_hold": true,
-      "last_seen_ms": 1793792401174,
+      "last_seen_ms": 1793793000677,
       "last_ready_alert_ms": 0
     },
     "CLANKERUSDT": {
@@ -141,14 +141,14 @@
       "lane": "RETEST",
       "ready": false,
       "timing": 58.0,
-      "confidence": 63.0,
+      "confidence": 57.0,
       "dump_score": 65,
       "price": 15.1,
       "first_watch_ms": 1793790600936,
       "watch_reset_ms": 1793792401174,
       "watch_high_price": 15.1,
       "multi_day_hold": false,
-      "last_seen_ms": 1793792401174,
+      "last_seen_ms": 1793793000677,
       "last_ready_alert_ms": 0
     }
   }
