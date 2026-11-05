@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1793905801126,
+  "updated_at_ms": 1793906400894,
   "symbols": {
     "LYNUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -13,7 +13,7 @@
       "watch_reset_ms": 1793905801126,
       "watch_high_price": 0.02166,
       "multi_day_hold": true,
-      "last_seen_ms": 1793905801126,
+      "last_seen_ms": 1793906400894,
       "last_ready_alert_ms": 0
     },
     "TAUSDT": {
@@ -28,22 +28,7 @@
       "watch_reset_ms": 1793905801126,
       "watch_high_price": 0.07338,
       "multi_day_hold": true,
-      "last_seen_ms": 1793905801126,
-      "last_ready_alert_ms": 0
-    },
-    "ACTUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "ready": false,
-      "timing": 60.0,
-      "confidence": 43.0,
-      "dump_score": 30,
-      "price": 0.009044,
-      "first_watch_ms": 1793902200591,
-      "watch_reset_ms": 1793905801126,
-      "watch_high_price": 0.009044,
-      "multi_day_hold": false,
-      "last_seen_ms": 1793905801126,
+      "last_seen_ms": 1793906400894,
       "last_ready_alert_ms": 0
     },
     "PIEVERSEUSDT": {
@@ -51,29 +36,29 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 46.0,
-      "confidence": 65.0,
+      "confidence": 71.0,
       "dump_score": 65,
       "price": 1.254,
       "first_watch_ms": 1793904000810,
       "watch_reset_ms": 1793905801126,
       "watch_high_price": 1.254,
       "multi_day_hold": true,
-      "last_seen_ms": 1793905801126,
+      "last_seen_ms": 1793906400894,
       "last_ready_alert_ms": 0
     },
     "AMZNUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 60.0,
-      "confidence": 68.0,
+      "timing": 50.0,
+      "confidence": 54.0,
       "dump_score": 65,
       "price": 260.11,
       "first_watch_ms": 1793902200591,
       "watch_reset_ms": 1793902200591,
       "watch_high_price": 261.42,
       "multi_day_hold": false,
-      "last_seen_ms": 1793905801126,
+      "last_seen_ms": 1793906400894,
       "last_ready_alert_ms": 0
     }
   }
