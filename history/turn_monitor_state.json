@@ -1,11 +1,11 @@
 {
-  "updated_at_ms": 1793904000810,
+  "updated_at_ms": 1793904601246,
   "symbols": {
     "LYNUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 38.0,
+      "timing": 30.0,
       "confidence": 48.0,
       "dump_score": 65,
       "price": 0.02149,
@@ -13,7 +13,7 @@
       "watch_reset_ms": 1793902200591,
       "watch_high_price": 0.02149,
       "multi_day_hold": true,
-      "last_seen_ms": 1793904000810,
+      "last_seen_ms": 1793904601246,
       "last_ready_alert_ms": 0
     },
     "PIEVERSEUSDT": {
@@ -21,14 +21,14 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 86.0,
-      "confidence": 57.0,
+      "confidence": 49.0,
       "dump_score": 65,
       "price": 1.2519,
       "first_watch_ms": 1793904000810,
       "watch_reset_ms": 1793904000810,
       "watch_high_price": 1.2519,
       "multi_day_hold": true,
-      "last_seen_ms": 1793904000810,
+      "last_seen_ms": 1793904601246,
       "last_ready_alert_ms": 0
     },
     "AMZNUSDT": {
@@ -43,7 +43,7 @@
       "watch_reset_ms": 1793902200591,
       "watch_high_price": 261.42,
       "multi_day_hold": false,
-      "last_seen_ms": 1793904000810,
+      "last_seen_ms": 1793904601246,
       "last_ready_alert_ms": 0
     },
     "ACTUSDT": {
@@ -58,7 +58,7 @@
       "watch_reset_ms": 1793904000810,
       "watch_high_price": 0.00902,
       "multi_day_hold": false,
-      "last_seen_ms": 1793904000810,
+      "last_seen_ms": 1793904601246,
       "last_ready_alert_ms": 0
     }
   }
