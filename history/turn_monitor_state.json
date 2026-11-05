@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1793887800594,
+  "updated_at_ms": 1793888400941,
   "symbols": {
     "AIOTUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -13,7 +13,7 @@
       "watch_reset_ms": 1793880600634,
       "watch_high_price": 0.09477,
       "multi_day_hold": true,
-      "last_seen_ms": 1793887800594,
+      "last_seen_ms": 1793888400941,
       "last_ready_alert_ms": 0
     },
     "APPUSDT": {
@@ -28,7 +28,7 @@
       "watch_reset_ms": 1793887800594,
       "watch_high_price": 337.06,
       "multi_day_hold": true,
-      "last_seen_ms": 1793887800594,
+      "last_seen_ms": 1793888400941,
       "last_ready_alert_ms": 0
     },
     "CVNAUSDT": {
@@ -43,52 +43,52 @@
       "watch_reset_ms": 1793887800594,
       "watch_high_price": 77.57,
       "multi_day_hold": true,
-      "last_seen_ms": 1793887800594,
+      "last_seen_ms": 1793888400941,
       "last_ready_alert_ms": 0
     },
     "TAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
-      "confidence": 28.0,
+      "timing": 70.0,
+      "confidence": 36.0,
       "dump_score": 30,
       "price": 0.07352,
       "first_watch_ms": 1793887800594,
       "watch_reset_ms": 1793887800594,
       "watch_high_price": 0.07352,
       "multi_day_hold": false,
-      "last_seen_ms": 1793887800594,
+      "last_seen_ms": 1793888400941,
       "last_ready_alert_ms": 0
     },
     "AMZNUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 52.0,
-      "confidence": 36.0,
+      "timing": 70.0,
+      "confidence": 44.0,
       "dump_score": 30,
       "price": 271.31,
       "first_watch_ms": 1793862600869,
       "watch_reset_ms": 1793886000432,
       "watch_high_price": 273.13,
       "multi_day_hold": false,
-      "last_seen_ms": 1793887800594,
+      "last_seen_ms": 1793888400941,
       "last_ready_alert_ms": 0
     },
     "CAPUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
+      "cycle_state": "WATCH_RETEST",
+      "lane": "RETEST",
       "ready": false,
-      "timing": 60.0,
-      "confidence": 42.0,
+      "timing": 76.0,
+      "confidence": 60.0,
       "dump_score": 30,
       "price": 0.10349,
       "first_watch_ms": 1793880600634,
       "watch_reset_ms": 1793886000432,
       "watch_high_price": 0.10476,
-      "multi_day_hold": true,
-      "last_seen_ms": 1793887800594,
+      "multi_day_hold": false,
+      "last_seen_ms": 1793888400941,
       "last_ready_alert_ms": 0
     },
     "SUPERUSDT": {
@@ -96,29 +96,29 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 46.0,
-      "confidence": 28.0,
-      "dump_score": 65,
+      "confidence": 14.0,
+      "dump_score": 30,
       "price": 0.18997,
       "first_watch_ms": 1793882400391,
       "watch_reset_ms": 1793887800594,
       "watch_high_price": 0.18997,
       "multi_day_hold": true,
-      "last_seen_ms": 1793887800594,
+      "last_seen_ms": 1793888400941,
       "last_ready_alert_ms": 0
     },
     "AINUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 50.0,
-      "confidence": 62.0,
-      "dump_score": 35,
+      "timing": 60.0,
+      "confidence": 68.0,
+      "dump_score": 65,
       "price": 0.27699,
       "first_watch_ms": 1793886000432,
       "watch_reset_ms": 1793886000432,
       "watch_high_price": 0.27699,
       "multi_day_hold": false,
-      "last_seen_ms": 1793887800594,
+      "last_seen_ms": 1793888400941,
       "last_ready_alert_ms": 0
     },
     "SKDDUSDT": {
@@ -133,7 +133,7 @@
       "watch_reset_ms": 1793887800594,
       "watch_high_price": 10.92,
       "multi_day_hold": true,
-      "last_seen_ms": 1793887800594,
+      "last_seen_ms": 1793888400941,
       "last_ready_alert_ms": 0
     },
     "ACTUSDT": {
@@ -148,7 +148,7 @@
       "watch_reset_ms": 1793880600634,
       "watch_high_price": 0.009089,
       "multi_day_hold": false,
-      "last_seen_ms": 1793887800594,
+      "last_seen_ms": 1793888400941,
       "last_ready_alert_ms": 0
     }
   }
