@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1794127200792,
+  "updated_at_ms": 1794127801319,
   "symbols": {
     "APPUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
-      "confidence": 71.0,
+      "timing": 60.0,
+      "confidence": 77.0,
       "dump_score": 65,
       "price": 386.07,
       "first_watch_ms": 1794069601116,
       "watch_reset_ms": 1794069601116,
       "watch_high_price": 387.19,
       "multi_day_hold": true,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 1794071400821
     },
     "ONEUSDT": {
@@ -28,7 +28,7 @@
       "watch_reset_ms": 1794127200792,
       "watch_high_price": 0.002136,
       "multi_day_hold": true,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "PIEVERSEUSDT": {
@@ -36,21 +36,21 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 42.0,
-      "confidence": 63.0,
+      "confidence": 61.0,
       "dump_score": 65,
       "price": 1.4184,
       "first_watch_ms": 1794121801132,
       "watch_reset_ms": 1794125400958,
       "watch_high_price": 1.4237,
       "multi_day_hold": true,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "MEGAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
+      "timing": 52.0,
       "confidence": 48.0,
       "dump_score": 65,
       "price": 0.05061,
@@ -58,22 +58,22 @@
       "watch_reset_ms": 1794125400958,
       "watch_high_price": 0.05089,
       "multi_day_hold": true,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "KOMAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 46.0,
-      "confidence": 16.0,
+      "timing": 52.0,
+      "confidence": 32.0,
       "dump_score": 30,
       "price": 0.019877,
       "first_watch_ms": 1794069601116,
       "watch_reset_ms": 1794123601269,
       "watch_high_price": 0.022422,
       "multi_day_hold": true,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "ERAUSDT": {
@@ -88,7 +88,7 @@
       "watch_reset_ms": 1794123601269,
       "watch_high_price": 0.07858,
       "multi_day_hold": true,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "AMZNUSDT": {
@@ -103,7 +103,7 @@
       "watch_reset_ms": 1794127200792,
       "watch_high_price": 260.58,
       "multi_day_hold": false,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "INJUSDT": {
@@ -118,7 +118,7 @@
       "watch_reset_ms": 1794121801132,
       "watch_high_price": 8.267,
       "multi_day_hold": false,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "RAYUSDT": {
@@ -126,14 +126,14 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 46.0,
-      "confidence": 64.0,
+      "confidence": 56.0,
       "dump_score": 65,
       "price": 1.7898,
       "first_watch_ms": 1794123601269,
       "watch_reset_ms": 1794123601269,
       "watch_high_price": 1.8075,
       "multi_day_hold": false,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "LYNUSDT": {
@@ -148,7 +148,7 @@
       "watch_reset_ms": 1794127200792,
       "watch_high_price": 0.02632,
       "multi_day_hold": false,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "ACTUSDT": {
@@ -163,22 +163,22 @@
       "watch_reset_ms": 1794121801132,
       "watch_high_price": 0.011757,
       "multi_day_hold": false,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "METUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 66.0,
-      "confidence": 55.0,
-      "dump_score": 30,
+      "timing": 46.0,
+      "confidence": 65.0,
+      "dump_score": 65,
       "price": 0.3159,
       "first_watch_ms": 1794127200792,
       "watch_reset_ms": 1794127200792,
       "watch_high_price": 0.3159,
       "multi_day_hold": false,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "ICNTUSDT": {
@@ -193,22 +193,22 @@
       "watch_reset_ms": 1794127200792,
       "watch_high_price": 0.3723,
       "multi_day_hold": true,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 1794124201385
     },
     "STXUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 52.0,
-      "confidence": 70.0,
+      "timing": 60.0,
+      "confidence": 66.0,
       "dump_score": 65,
       "price": 0.3374,
       "first_watch_ms": 1794069601116,
       "watch_reset_ms": 1794121801132,
       "watch_high_price": 0.3471,
       "multi_day_hold": true,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     },
     "LITUSDT": {
@@ -223,7 +223,7 @@
       "watch_reset_ms": 1794121801132,
       "watch_high_price": 3.3127,
       "multi_day_hold": false,
-      "last_seen_ms": 1794127200792,
+      "last_seen_ms": 1794127801319,
       "last_ready_alert_ms": 0
     }
   }
