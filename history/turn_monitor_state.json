@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1794691201114,
+  "updated_at_ms": 1794691800946,
   "symbols": {
     "AIOTUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -13,22 +13,22 @@
       "watch_reset_ms": 1794679800739,
       "watch_high_price": 0.15985,
       "multi_day_hold": true,
-      "last_seen_ms": 1794691201114,
+      "last_seen_ms": 1794691800946,
       "last_ready_alert_ms": 0
     },
     "DODOXUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 46.0,
-      "confidence": 48.0,
+      "timing": 88.0,
+      "confidence": 57.0,
       "dump_score": 30,
       "price": 0.031596,
       "first_watch_ms": 1794687000609,
       "watch_reset_ms": 1794688800645,
       "watch_high_price": 0.032559,
       "multi_day_hold": false,
-      "last_seen_ms": 1794691201114,
+      "last_seen_ms": 1794691800946,
       "last_ready_alert_ms": 0
     }
   }
