@@ -1,34 +1,34 @@
 {
-  "updated_at_ms": 1794678000489,
+  "updated_at_ms": 1794678600485,
   "symbols": {
     "APPUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 50.0,
-      "confidence": 75.0,
+      "timing": 76.0,
+      "confidence": 83.0,
       "dump_score": 65,
       "price": 405.02,
       "first_watch_ms": 1794674400598,
       "watch_reset_ms": 1794674400598,
       "watch_high_price": 405.02,
       "multi_day_hold": true,
-      "last_seen_ms": 1794678000489,
+      "last_seen_ms": 1794678600485,
       "last_ready_alert_ms": 0
     },
     "AIOTUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 36.0,
-      "confidence": 76.0,
+      "timing": 28.0,
+      "confidence": 60.0,
       "dump_score": 65,
       "price": 0.15886,
       "first_watch_ms": 1794674400598,
       "watch_reset_ms": 1794676200581,
       "watch_high_price": 0.15886,
       "multi_day_hold": true,
-      "last_seen_ms": 1794678000489,
+      "last_seen_ms": 1794678600485,
       "last_ready_alert_ms": 0
     },
     "KITEUSDT": {
@@ -43,7 +43,7 @@
       "watch_reset_ms": 1794678000489,
       "watch_high_price": 0.12854,
       "multi_day_hold": false,
-      "last_seen_ms": 1794678000489,
+      "last_seen_ms": 1794678600485,
       "last_ready_alert_ms": 0
     },
     "DODOXUSDT": {
@@ -58,7 +58,7 @@
       "watch_reset_ms": 1794676200581,
       "watch_high_price": 0.032871,
       "multi_day_hold": false,
-      "last_seen_ms": 1794678000489,
+      "last_seen_ms": 1794678600485,
       "last_ready_alert_ms": 0
     },
     "NIGHTUSDT": {
@@ -66,14 +66,14 @@
       "lane": "RETEST",
       "ready": false,
       "timing": 66.0,
-      "confidence": 54.0,
+      "confidence": 46.0,
       "dump_score": 30,
       "price": 0.04831,
       "first_watch_ms": 1794676200581,
       "watch_reset_ms": 1794678000489,
       "watch_high_price": 0.04831,
       "multi_day_hold": false,
-      "last_seen_ms": 1794678000489,
+      "last_seen_ms": 1794678600485,
       "last_ready_alert_ms": 0
     }
   }
