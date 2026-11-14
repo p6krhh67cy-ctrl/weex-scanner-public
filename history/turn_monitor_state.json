@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1794667200995,
+  "updated_at_ms": 1794667801103,
   "symbols": {
     "APPUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -13,7 +13,7 @@
       "watch_reset_ms": 1794640200255,
       "watch_high_price": 412.2,
       "multi_day_hold": true,
-      "last_seen_ms": 1794667200995,
+      "last_seen_ms": 1794667801103,
       "last_ready_alert_ms": 1794658800620
     },
     "AMDUSDT": {
@@ -21,21 +21,21 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 46.0,
-      "confidence": 90.0,
+      "confidence": 82.0,
       "dump_score": 65,
       "price": 522.38,
       "first_watch_ms": 1794570000688,
       "watch_reset_ms": 1794571800823,
       "watch_high_price": 578.74,
       "multi_day_hold": true,
-      "last_seen_ms": 1794667200995,
+      "last_seen_ms": 1794667801103,
       "last_ready_alert_ms": 0
     },
     "LRCXUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 86.0,
+      "timing": 76.0,
       "confidence": 86.0,
       "dump_score": 65,
       "price": 222.73,
@@ -43,7 +43,7 @@
       "watch_reset_ms": 1794571800823,
       "watch_high_price": 235.25,
       "multi_day_hold": true,
-      "last_seen_ms": 1794667200995,
+      "last_seen_ms": 1794667801103,
       "last_ready_alert_ms": 0
     }
   }
