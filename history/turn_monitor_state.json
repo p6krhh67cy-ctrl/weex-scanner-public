@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1794741000593,
+  "updated_at_ms": 1794741600905,
   "symbols": {
     "PIEVERSEUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 76.0,
-      "confidence": 55.0,
-      "dump_score": 30,
+      "timing": 66.0,
+      "confidence": 41.0,
+      "dump_score": 0,
       "price": 1.9023,
       "first_watch_ms": 1794737400340,
       "watch_reset_ms": 1794737400340,
       "watch_high_price": 1.96,
       "multi_day_hold": false,
-      "last_seen_ms": 1794741000593,
+      "last_seen_ms": 1794741600905,
       "last_ready_alert_ms": 0
     }
   }
