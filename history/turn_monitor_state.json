@@ -1,11 +1,11 @@
 {
-  "updated_at_ms": 1794737400340,
+  "updated_at_ms": 1794738000459,
   "symbols": {
     "PIEVERSEUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 60.0,
+      "timing": 76.0,
       "confidence": 47.0,
       "dump_score": 30,
       "price": 1.96,
@@ -13,22 +13,22 @@
       "watch_reset_ms": 1794737400340,
       "watch_high_price": 1.96,
       "multi_day_hold": false,
-      "last_seen_ms": 1794737400340,
+      "last_seen_ms": 1794738000459,
       "last_ready_alert_ms": 0
     },
     "BLESSUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 72.0,
-      "confidence": 59.0,
+      "timing": 80.0,
+      "confidence": 62.0,
       "dump_score": 65,
       "price": 0.009242,
       "first_watch_ms": 1794737400340,
       "watch_reset_ms": 1794737400340,
       "watch_high_price": 0.009242,
       "multi_day_hold": false,
-      "last_seen_ms": 1794737400340,
+      "last_seen_ms": 1794738000459,
       "last_ready_alert_ms": 0
     }
   }
