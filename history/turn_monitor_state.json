@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1794753601254,
+  "updated_at_ms": 1794754200405,
   "symbols": {
     "MEGAUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -13,7 +13,7 @@
       "watch_reset_ms": 1794748200799,
       "watch_high_price": 0.05091,
       "multi_day_hold": false,
-      "last_seen_ms": 1794753601254,
+      "last_seen_ms": 1794754200405,
       "last_ready_alert_ms": 0
     }
   }
