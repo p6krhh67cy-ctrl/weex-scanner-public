@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1794768000677,
+  "updated_at_ms": 1794768600632,
   "symbols": {
     "KITEUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -13,22 +13,22 @@
       "watch_reset_ms": 1794766201177,
       "watch_high_price": 0.13843,
       "multi_day_hold": true,
-      "last_seen_ms": 1794768000677,
+      "last_seen_ms": 1794768600632,
       "last_ready_alert_ms": 0
     },
     "DODOXUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 58.0,
-      "confidence": 77.0,
+      "timing": 50.0,
+      "confidence": 69.0,
       "dump_score": 65,
       "price": 0.032482,
       "first_watch_ms": 1794757200532,
       "watch_reset_ms": 1794757200532,
       "watch_high_price": 0.03284,
       "multi_day_hold": true,
-      "last_seen_ms": 1794768000677,
+      "last_seen_ms": 1794768600632,
       "last_ready_alert_ms": 0
     }
   }
