@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1794748801116,
+  "updated_at_ms": 1794750000849,
   "symbols": {
     "MEGAUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -8,12 +8,12 @@
       "timing": 50.0,
       "confidence": 30.0,
       "dump_score": 30,
-      "price": 0.05091,
+      "price": 0.05068,
       "first_watch_ms": 1794744600995,
       "watch_reset_ms": 1794748200799,
       "watch_high_price": 0.05091,
       "multi_day_hold": false,
-      "last_seen_ms": 1794748801116,
+      "last_seen_ms": 1794750000849,
       "last_ready_alert_ms": 0
     },
     "PIEVERSEUSDT": {
@@ -23,12 +23,12 @@
       "timing": 66.0,
       "confidence": 47.0,
       "dump_score": 35,
-      "price": 1.8922,
+      "price": 1.8844,
       "first_watch_ms": 1794737400340,
       "watch_reset_ms": 1794737400340,
       "watch_high_price": 1.96,
       "multi_day_hold": false,
-      "last_seen_ms": 1794748801116,
+      "last_seen_ms": 1794750000849,
       "last_ready_alert_ms": 0
     }
   }
