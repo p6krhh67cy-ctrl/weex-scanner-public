@@ -1,34 +1,19 @@
 {
-  "updated_at_ms": 1794847201070,
+  "updated_at_ms": 1794847800692,
   "symbols": {
-    "EVAAUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "ready": false,
-      "timing": 38.0,
-      "confidence": 27.0,
-      "dump_score": 65,
-      "price": 3.1666,
-      "first_watch_ms": 1794841801445,
-      "watch_reset_ms": 1794843600555,
-      "watch_high_price": 3.2397,
-      "multi_day_hold": false,
-      "last_seen_ms": 1794847201070,
-      "last_ready_alert_ms": 0
-    },
     "PIEVERSEUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
       "timing": 42.0,
-      "confidence": 38.0,
+      "confidence": 32.0,
       "dump_score": 65,
       "price": 2.0259,
       "first_watch_ms": 1794841801445,
       "watch_reset_ms": 1794847201070,
       "watch_high_price": 2.0259,
       "multi_day_hold": true,
-      "last_seen_ms": 1794847201070,
+      "last_seen_ms": 1794847800692,
       "last_ready_alert_ms": 0
     },
     "VELVETUSDT": {
@@ -36,14 +21,14 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 52.0,
-      "confidence": 32.0,
+      "confidence": 40.0,
       "dump_score": 30,
       "price": 0.05311,
       "first_watch_ms": 1794843600555,
       "watch_reset_ms": 1794843600555,
       "watch_high_price": 0.05363,
       "multi_day_hold": false,
-      "last_seen_ms": 1794847201070,
+      "last_seen_ms": 1794847800692,
       "last_ready_alert_ms": 0
     },
     "SKDDUSDT": {
@@ -58,7 +43,7 @@
       "watch_reset_ms": 1794843600555,
       "watch_high_price": 11.727,
       "multi_day_hold": true,
-      "last_seen_ms": 1794847201070,
+      "last_seen_ms": 1794847800692,
       "last_ready_alert_ms": 0
     },
     "DODOXUSDT": {
@@ -73,7 +58,7 @@
       "watch_reset_ms": 1794847201070,
       "watch_high_price": 0.033305,
       "multi_day_hold": true,
-      "last_seen_ms": 1794847201070,
+      "last_seen_ms": 1794847800692,
       "last_ready_alert_ms": 1794845401357
     },
     "CROSSUSDT": {
@@ -81,14 +66,14 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 20.0,
-      "confidence": 4.0,
-      "dump_score": 65,
+      "confidence": 0.0,
+      "dump_score": 30,
       "price": 0.13232,
       "first_watch_ms": 1794832801164,
       "watch_reset_ms": 1794840001425,
       "watch_high_price": 0.13276,
       "multi_day_hold": true,
-      "last_seen_ms": 1794847201070,
+      "last_seen_ms": 1794847800692,
       "last_ready_alert_ms": 0
     }
   }
