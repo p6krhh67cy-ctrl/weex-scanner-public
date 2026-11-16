@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1794840001425,
+  "updated_at_ms": 1794840600933,
   "symbols": {
     "DODOXUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
       "timing": 60.0,
-      "confidence": 54.0,
+      "confidence": 50.0,
       "dump_score": 65,
       "price": 0.032869,
       "first_watch_ms": 1794840001425,
       "watch_reset_ms": 1794840001425,
       "watch_high_price": 0.032869,
       "multi_day_hold": true,
-      "last_seen_ms": 1794840001425,
+      "last_seen_ms": 1794840600933,
       "last_ready_alert_ms": 0
     },
     "CROSSUSDT": {
@@ -28,7 +28,7 @@
       "watch_reset_ms": 1794840001425,
       "watch_high_price": 0.13276,
       "multi_day_hold": true,
-      "last_seen_ms": 1794840001425,
+      "last_seen_ms": 1794840600933,
       "last_ready_alert_ms": 0
     }
   }
