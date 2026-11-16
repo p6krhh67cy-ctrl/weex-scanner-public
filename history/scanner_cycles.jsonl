@@ -1935,3 +1935,4 @@
 {"ts_ms":1794779400754,"warsaw_time":"2026-11-15T22:50:00+01:00","slot":"22:50","mode":"monitor","market_count":0,"watch_count":0,"pump_watch":[],"retest_watch":[],"radar_ready":[],"monitor_count":0,"monitor_symbols":{}}
 {"ts_ms":1794812419301,"warsaw_time":"2026-11-16T08:00:19+01:00","slot":"08:00","mode":"full","market_count":264,"watch_count":0,"pump_watch":[],"retest_watch":[],"radar_ready":[],"monitor_count":0,"monitor_symbols":{}}
 {"ts_ms":1794813000485,"warsaw_time":"2026-11-16T08:10:00+01:00","slot":"08:10","mode":"monitor","market_count":264,"watch_count":0,"pump_watch":[],"retest_watch":[],"radar_ready":[],"monitor_count":0,"monitor_symbols":{}}
+{"ts_ms":1794813600552,"warsaw_time":"2026-11-16T08:20:00+01:00","slot":"08:20","mode":"monitor","market_count":264,"watch_count":0,"pump_watch":[],"retest_watch":[],"radar_ready":[],"monitor_count":0,"monitor_symbols":{}}
