@@ -1,4 +1,35 @@
 {
-  "updated_at_ms": 1794820801168,
-  "symbols": {}
+  "updated_at_ms": 1794822000729,
+  "symbols": {
+    "MEGAUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 42.0,
+      "confidence": 50.0,
+      "dump_score": 65,
+      "price": 0.05062,
+      "first_watch_ms": 1794822000729,
+      "watch_reset_ms": 1794822000729,
+      "watch_high_price": 0.05062,
+      "multi_day_hold": false,
+      "last_seen_ms": 1794822000729,
+      "last_ready_alert_ms": 0
+    },
+    "TACUSDT": {
+      "cycle_state": "WATCH_RETEST",
+      "lane": "RETEST",
+      "ready": false,
+      "timing": 50.0,
+      "confidence": 57.0,
+      "dump_score": 65,
+      "price": 0.00143,
+      "first_watch_ms": 1794822000729,
+      "watch_reset_ms": 1794822000729,
+      "watch_high_price": 0.00143,
+      "multi_day_hold": false,
+      "last_seen_ms": 1794822000729,
+      "last_ready_alert_ms": 0
+    }
+  }
 }
