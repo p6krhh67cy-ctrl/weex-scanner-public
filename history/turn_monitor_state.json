@@ -1,4 +1,35 @@
 {
-  "updated_at_ms": 1794860401255,
-  "symbols": {}
+  "updated_at_ms": 1794861601147,
+  "symbols": {
+    "DODOXUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 60.0,
+      "confidence": 45.0,
+      "dump_score": 30,
+      "price": 0.033484,
+      "first_watch_ms": 1794861601147,
+      "watch_reset_ms": 1794861601147,
+      "watch_high_price": 0.033484,
+      "multi_day_hold": true,
+      "last_seen_ms": 1794861601147,
+      "last_ready_alert_ms": 0
+    },
+    "SKDDUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 20.0,
+      "confidence": 26.0,
+      "dump_score": 65,
+      "price": 11.627,
+      "first_watch_ms": 1794861601147,
+      "watch_reset_ms": 1794861601147,
+      "watch_high_price": 11.627,
+      "multi_day_hold": true,
+      "last_seen_ms": 1794861601147,
+      "last_ready_alert_ms": 0
+    }
+  }
 }
