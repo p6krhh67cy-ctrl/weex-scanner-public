@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1794828000383,
+  "updated_at_ms": 1794829200617,
   "symbols": {
     "MEGAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
+      "timing": 52.0,
       "confidence": 58.0,
       "dump_score": 65,
-      "price": 0.05039,
+      "price": 0.05022,
       "first_watch_ms": 1794822000729,
       "watch_reset_ms": 1794822000729,
       "watch_high_price": 0.05062,
       "multi_day_hold": false,
-      "last_seen_ms": 1794828000383,
+      "last_seen_ms": 1794829200617,
       "last_ready_alert_ms": 0
     }
   }
