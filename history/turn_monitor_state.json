@@ -1,21 +1,6 @@
 {
-  "updated_at_ms": 1794899400837,
+  "updated_at_ms": 1794900001234,
   "symbols": {
-    "RAREUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "ready": false,
-      "timing": 20.0,
-      "confidence": 34.0,
-      "dump_score": 65,
-      "price": 0.01483,
-      "first_watch_ms": 1794899400837,
-      "watch_reset_ms": 1794899400837,
-      "watch_high_price": 0.01483,
-      "multi_day_hold": false,
-      "last_seen_ms": 1794899400837,
-      "last_ready_alert_ms": 0
-    },
     "NIGHTUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
@@ -28,22 +13,22 @@
       "watch_reset_ms": 1794899400837,
       "watch_high_price": 0.04777,
       "multi_day_hold": true,
-      "last_seen_ms": 1794899400837,
+      "last_seen_ms": 1794900001234,
       "last_ready_alert_ms": 0
     },
     "DODOXUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 76.0,
-      "confidence": 64.0,
+      "timing": 38.0,
+      "confidence": 35.0,
       "dump_score": 30,
       "price": 0.033292,
       "first_watch_ms": 1794861601147,
       "watch_reset_ms": 1794861601147,
       "watch_high_price": 0.033484,
       "multi_day_hold": false,
-      "last_seen_ms": 1794899400837,
+      "last_seen_ms": 1794900001234,
       "last_ready_alert_ms": 0
     }
   }
