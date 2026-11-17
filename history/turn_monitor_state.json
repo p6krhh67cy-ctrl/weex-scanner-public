@@ -1,11 +1,11 @@
 {
-  "updated_at_ms": 1794933601467,
+  "updated_at_ms": 1794934200494,
   "symbols": {
     "SKDDUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
+      "timing": 52.0,
       "confidence": 32.0,
       "dump_score": 30,
       "price": 12.044,
@@ -13,52 +13,52 @@
       "watch_reset_ms": 1794931800646,
       "watch_high_price": 12.251,
       "multi_day_hold": true,
-      "last_seen_ms": 1794933601467,
+      "last_seen_ms": 1794934200494,
       "last_ready_alert_ms": 0
     },
     "SKYAIUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 68.0,
-      "confidence": 60.0,
+      "timing": 86.0,
+      "confidence": 62.0,
       "dump_score": 65,
       "price": 0.03877,
       "first_watch_ms": 1794928200775,
       "watch_reset_ms": 1794928200775,
       "watch_high_price": 0.03954,
       "multi_day_hold": true,
-      "last_seen_ms": 1794933601467,
+      "last_seen_ms": 1794934200494,
       "last_ready_alert_ms": 0
     },
     "MUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 86.0,
-      "confidence": 60.0,
+      "timing": 68.0,
+      "confidence": 48.0,
       "dump_score": 65,
       "price": 0.9033,
       "first_watch_ms": 1794926400498,
       "watch_reset_ms": 1794926400498,
       "watch_high_price": 0.9168,
       "multi_day_hold": false,
-      "last_seen_ms": 1794933601467,
+      "last_seen_ms": 1794934200494,
       "last_ready_alert_ms": 0
     },
     "DODOXUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 68.0,
-      "confidence": 70.0,
+      "timing": 60.0,
+      "confidence": 62.0,
       "dump_score": 65,
       "price": 0.033737,
       "first_watch_ms": 1794933601467,
       "watch_reset_ms": 1794933601467,
       "watch_high_price": 0.033737,
       "multi_day_hold": false,
-      "last_seen_ms": 1794933601467,
+      "last_seen_ms": 1794934200494,
       "last_ready_alert_ms": 0
     },
     "CROSSUSDT": {
@@ -73,7 +73,7 @@
       "watch_reset_ms": 1794928200775,
       "watch_high_price": 0.15705,
       "multi_day_hold": false,
-      "last_seen_ms": 1794933601467,
+      "last_seen_ms": 1794934200494,
       "last_ready_alert_ms": 0
     }
   }
