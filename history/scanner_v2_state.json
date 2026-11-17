@@ -1,38 +1,27 @@
 {
-  "updated_at_ms": 1794900611120,
+  "updated_at_ms": 1794902418900,
   "scanner_overlay_version": "11.8-persistent-predrop-new-high-rearm",
   "symbols": {
     "AMDUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 78.0,
-      "confidence": 81.0,
-      "dump_score": 0,
-      "price": 511.6,
-      "last_seen_ms": 1794900611120,
-      "cycle_high": 594.8875014724938,
-      "cycle_id": 1
-    },
-    "KITEUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 88.0,
-      "confidence": 78.0,
-      "dump_score": 0,
-      "price": 0.13111,
-      "last_seen_ms": 1794900611120,
-      "cycle_high": 0.1447335387424398,
-      "cycle_id": 1
-    },
-    "ALABUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
       "timing": 70.0,
       "confidence": 81.0,
       "dump_score": 0,
-      "price": 206.63,
-      "last_seen_ms": 1794900611120,
-      "cycle_high": 237.9433440810686,
+      "price": 514.62,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 594.8875014724938,
+      "cycle_id": 1
+    },
+    "CBRSUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 70.0,
+      "confidence": 80.0,
+      "dump_score": 0,
+      "price": 101.61,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 120.5195113272447,
       "cycle_id": 1
     },
     "LRCXUSDT": {
@@ -41,76 +30,208 @@
       "timing": 70.0,
       "confidence": 88.0,
       "dump_score": 0,
-      "price": 214.74,
-      "last_seen_ms": 1794900611120,
+      "price": 216.0,
+      "last_seen_ms": 1794902418900,
       "cycle_high": 241.8270319221191,
       "cycle_id": 1
     },
-    "AVGOUSDT": {
+    "MRVLUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 70.0,
+      "confidence": 88.0,
+      "dump_score": 0,
+      "price": 147.92,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 174.66052662652024,
+      "cycle_id": 1
+    },
+    "ALABUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 70.0,
+      "confidence": 88.0,
+      "dump_score": 0,
+      "price": 208.02,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 237.9433440810686,
+      "cycle_id": 1
+    },
+    "MUUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 70.0,
+      "confidence": 88.0,
+      "dump_score": 0,
+      "price": 727.55,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 828.6446469248291,
+      "cycle_id": 1
+    },
+    "CRDOUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
       "timing": 78.0,
+      "confidence": 81.0,
+      "dump_score": 0,
+      "price": 123.46,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 148.2112845138055,
+      "cycle_id": 1
+    },
+    "PIEVERSEUSDT": {
+      "cycle_state": "TRACK",
+      "lane": "NONE",
+      "timing": 46.0,
       "confidence": 56.0,
       "dump_score": 0,
-      "price": 337.63,
-      "last_seen_ms": 1794900611120,
-      "cycle_high": 370.289537179206,
+      "price": 1.9496,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 2.234754699679046,
+      "cycle_id": 1
+    },
+    "SPACEUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 76.0,
+      "confidence": 64.0,
+      "dump_score": 0,
+      "price": 0.003708,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 0.004416,
+      "cycle_id": 1
+    },
+    "RESOLVUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 86.0,
+      "confidence": 84.0,
+      "dump_score": 0,
+      "price": 0.0134,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 0.014649611894610254,
       "cycle_id": 1
     },
     "OPGUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 68.0,
-      "confidence": 48.0,
+      "timing": 66.0,
+      "confidence": 54.0,
       "dump_score": 0,
-      "price": 0.1382,
-      "last_seen_ms": 1794900611120,
+      "price": 0.1381,
+      "last_seen_ms": 1794902418900,
       "cycle_high": 0.16401614051744598,
       "cycle_id": 1
     },
     "VELVETUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 70.0,
+      "timing": 86.0,
       "confidence": 56.0,
       "dump_score": 0,
-      "price": 0.05235,
-      "last_seen_ms": 1794900611120,
+      "price": 0.05233,
+      "last_seen_ms": 1794902418900,
       "cycle_high": 0.05646879756468798,
       "cycle_id": 1
     },
-    "NIGHTUSDT": {
-      "cycle_state": "WATCH_PUMP",
+    "CROSSUSDT": {
+      "cycle_state": "READY_FOR_CHAT",
       "lane": "PUMP",
-      "timing": 58.0,
+      "timing": 70.0,
       "confidence": 50.0,
       "dump_score": 65,
-      "price": 0.04825,
-      "last_seen_ms": 1794900611120,
-      "cycle_high": 0.051191746709356105,
+      "price": 0.14844,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 0.15767,
+      "cycle_id": 8
+    },
+    "ASTERUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 50.0,
+      "confidence": 50.0,
+      "dump_score": 0,
+      "price": 0.5952,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 0.711196080774286,
       "cycle_id": 1
     },
-    "PROMUSDT": {
+    "PHAUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 76.0,
+      "confidence": 53.0,
+      "dump_score": 0,
+      "price": 0.03255,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 0.036401252516215614,
+      "cycle_id": 1
+    },
+    "VVVUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "timing": 42.0,
+      "confidence": 30.0,
+      "dump_score": 65,
+      "price": 21.457,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 22.148018166804295,
+      "cycle_id": 1
+    },
+    "EVAAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "timing": 42.0,
       "confidence": 24.0,
       "dump_score": 30,
-      "price": 5.688,
-      "last_seen_ms": 1794900611120,
-      "cycle_high": 6.116129032258065,
+      "price": 4.0347,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 4.2495,
       "cycle_id": 1
     },
-    "CROSSUSDT": {
-      "cycle_state": "TRACK",
+    "AVGOUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 56.0,
-      "confidence": 28.0,
+      "timing": 58.0,
+      "confidence": 51.0,
       "dump_score": 0,
-      "price": 0.15018,
-      "last_seen_ms": 1794900611120,
-      "cycle_high": 0.15767,
-      "cycle_id": 8
+      "price": 339.04,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 370.289537179206,
+      "cycle_id": 1
+    },
+    "RKLBUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 36.0,
+      "confidence": 70.0,
+      "dump_score": 0,
+      "price": 57.41,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 68.32083779602522,
+      "cycle_id": 1
+    },
+    "NVDAUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 36.0,
+      "confidence": 76.0,
+      "dump_score": 0,
+      "price": 158.02,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 188.72566583064614,
+      "cycle_id": 1
+    },
+    "COOKIEUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 36.0,
+      "confidence": 70.0,
+      "dump_score": 0,
+      "price": 0.008722,
+      "last_seen_ms": 1794902418900,
+      "cycle_high": 0.00933533126404795,
+      "cycle_id": 1
     }
   }
 }
