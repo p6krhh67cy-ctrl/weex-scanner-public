@@ -1,35 +1,4 @@
 {
-  "updated_at_ms": 1794901200647,
-  "symbols": {
-    "NIGHTUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "ready": false,
-      "timing": 58.0,
-      "confidence": 50.0,
-      "dump_score": 65,
-      "price": 0.04825,
-      "first_watch_ms": 1794899400837,
-      "watch_reset_ms": 1794901200647,
-      "watch_high_price": 0.04825,
-      "multi_day_hold": true,
-      "last_seen_ms": 1794901200647,
-      "last_ready_alert_ms": 0
-    },
-    "PROMUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "ready": false,
-      "timing": 42.0,
-      "confidence": 24.0,
-      "dump_score": 30,
-      "price": 5.688,
-      "first_watch_ms": 1794901200647,
-      "watch_reset_ms": 1794901200647,
-      "watch_high_price": 5.688,
-      "multi_day_hold": true,
-      "last_seen_ms": 1794901200647,
-      "last_ready_alert_ms": 0
-    }
-  }
+  "updated_at_ms": 1794901800986,
+  "symbols": {}
 }
