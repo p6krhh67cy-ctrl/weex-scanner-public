@@ -1,26 +1,70 @@
 {
-  "updated_at_ms": 1794938416460,
+  "updated_at_ms": 1794940216587,
   "scanner_overlay_version": "11.8-persistent-predrop-new-high-rearm",
   "symbols": {
-    "AMATUSDT": {
+    "AMDUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
       "timing": 78.0,
       "confidence": 81.0,
       "dump_score": 0,
-      "price": 346.03,
-      "last_seen_ms": 1794938416460,
+      "price": 493.97,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 594.5329471397538,
+      "cycle_id": 1
+    },
+    "NVDAUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 80.0,
+      "confidence": 87.0,
+      "dump_score": 0,
+      "price": 154.3,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 188.10191393392662,
+      "cycle_id": 1
+    },
+    "SKHYNIXUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 70.0,
+      "confidence": 87.0,
+      "dump_score": 0,
+      "price": 821.31,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 999.0390463447268,
+      "cycle_id": 1
+    },
+    "AMATUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 88.0,
+      "confidence": 87.0,
+      "dump_score": 0,
+      "price": 347.4,
+      "last_seen_ms": 1794940216587,
       "cycle_high": 405.53742131032874,
+      "cycle_id": 1
+    },
+    "LRCXUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 88.0,
+      "confidence": 87.0,
+      "dump_score": 0,
+      "price": 208.95,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 241.53277077794473,
       "cycle_id": 1
     },
     "AVGOUSDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 58.0,
-      "confidence": 79.0,
+      "timing": 50.0,
+      "confidence": 77.0,
       "dump_score": 0,
-      "price": 338.5,
-      "last_seen_ms": 1794938416460,
+      "price": 340.23,
+      "last_seen_ms": 1794940216587,
       "cycle_high": 370.35671690339365,
       "cycle_id": 1
     },
@@ -28,11 +72,22 @@
       "cycle_state": "TRACK",
       "lane": "NONE",
       "timing": 58.0,
-      "confidence": 57.0,
+      "confidence": 65.0,
       "dump_score": 0,
-      "price": 0.03897,
-      "last_seen_ms": 1794938416460,
+      "price": 0.03892,
+      "last_seen_ms": 1794940216587,
       "cycle_high": 0.04226,
+      "cycle_id": 1
+    },
+    "PIEVERSEUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "timing": 42.0,
+      "confidence": 46.0,
+      "dump_score": 65,
+      "price": 2.0864,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 2.2321600513533753,
       "cycle_id": 1
     },
     "CROSSUSDT": {
@@ -41,8 +96,8 @@
       "timing": 66.0,
       "confidence": 56.0,
       "dump_score": 65,
-      "price": 0.15147,
-      "last_seen_ms": 1794938416460,
+      "price": 0.15308,
+      "last_seen_ms": 1794940216587,
       "cycle_high": 0.16288388725283973,
       "cycle_id": 9
     },
@@ -52,65 +107,76 @@
       "timing": 66.0,
       "confidence": 75.0,
       "dump_score": 0,
-      "price": 0.01364,
-      "last_seen_ms": 1794938416460,
+      "price": 0.01358,
+      "last_seen_ms": 1794940216587,
       "cycle_high": 0.014519931418774109,
       "cycle_id": 1
     },
-    "AMDUSDT": {
+    "4USDT": {
       "cycle_state": "CORRECTION_SPENT",
       "lane": "NONE",
-      "timing": 36.0,
-      "confidence": 77.0,
+      "timing": 66.0,
+      "confidence": 64.0,
       "dump_score": 0,
-      "price": 489.86,
-      "last_seen_ms": 1794938416460,
-      "cycle_high": 594.5329471397538,
+      "price": 0.008773,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 0.009928700769578995,
+      "cycle_id": 1
+    },
+    "BUSDT": {
+      "cycle_state": "CORRECTION_SPENT",
+      "lane": "NONE",
+      "timing": 58.0,
+      "confidence": 47.0,
+      "dump_score": 0,
+      "price": 0.101,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 0.12209864603481627,
+      "cycle_id": 1
+    },
+    "VVVUSDT": {
+      "cycle_state": "TRACK",
+      "lane": "NONE",
+      "timing": 76.0,
+      "confidence": 51.0,
+      "dump_score": 0,
+      "price": 20.534,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 22.142623487078833,
+      "cycle_id": 1
+    },
+    "MUSDT": {
+      "cycle_state": "TRACK",
+      "lane": "NONE",
+      "timing": 86.0,
+      "confidence": 55.0,
+      "dump_score": 0,
+      "price": 0.8962,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 0.9542573420663427,
       "cycle_id": 1
     },
     "VELVETUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "timing": 42.0,
-      "confidence": 44.0,
+      "confidence": 49.0,
       "dump_score": 65,
-      "price": 0.0538,
-      "last_seen_ms": 1794938416460,
+      "price": 0.05426,
+      "last_seen_ms": 1794940216587,
       "cycle_high": 0.05646879756468798,
-      "cycle_id": 1
-    },
-    "MUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "timing": 58.0,
-      "confidence": 44.0,
-      "dump_score": 65,
-      "price": 0.9099,
-      "last_seen_ms": 1794938416460,
-      "cycle_high": 0.9542573420663427,
-      "cycle_id": 1
-    },
-    "VVVUSDT": {
-      "cycle_state": "CORRECTION_SPENT",
-      "lane": "NONE",
-      "timing": 46.0,
-      "confidence": 61.0,
-      "dump_score": 0,
-      "price": 20.307,
-      "last_seen_ms": 1794938416460,
-      "cycle_high": 22.142623487078833,
       "cycle_id": 1
     },
     "BREVUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
-      "timing": 38.0,
-      "confidence": 2.0,
-      "dump_score": 0,
-      "price": 0.0956,
-      "last_seen_ms": 1794938416460,
-      "cycle_high": 0.11633,
-      "cycle_id": 4
+      "timing": 36.0,
+      "confidence": 8.0,
+      "dump_score": 35,
+      "price": 0.09775,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 0.116744297145587,
+      "cycle_id": 5
     },
     "MMTUSDT": {
       "cycle_state": "TRACK",
@@ -118,10 +184,10 @@
       "timing": 38.0,
       "confidence": 16.0,
       "dump_score": 0,
-      "price": 0.1411,
-      "last_seen_ms": 1794938416460,
-      "cycle_high": 0.1491,
-      "cycle_id": 2
+      "price": 0.1494,
+      "last_seen_ms": 1794940216587,
+      "cycle_high": 0.1511,
+      "cycle_id": 3
     }
   }
 }
