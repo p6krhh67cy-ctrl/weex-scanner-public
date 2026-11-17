@@ -1,11 +1,11 @@
 {
-  "updated_at_ms": 1794937201503,
+  "updated_at_ms": 1794937801105,
   "symbols": {
     "BREVUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 30.0,
+      "timing": 28.0,
       "confidence": 2.0,
       "dump_score": 0,
       "price": 0.09719,
@@ -13,7 +13,7 @@
       "watch_reset_ms": 1794937201503,
       "watch_high_price": 0.09719,
       "multi_day_hold": false,
-      "last_seen_ms": 1794937201503,
+      "last_seen_ms": 1794937801105,
       "last_ready_alert_ms": 0
     },
     "PIEVERSEUSDT": {
@@ -28,7 +28,7 @@
       "watch_reset_ms": 1794937201503,
       "watch_high_price": 2.0239,
       "multi_day_hold": true,
-      "last_seen_ms": 1794937201503,
+      "last_seen_ms": 1794937801105,
       "last_ready_alert_ms": 0
     },
     "MUSDT": {
@@ -36,14 +36,14 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 58.0,
-      "confidence": 36.0,
+      "confidence": 44.0,
       "dump_score": 65,
       "price": 0.915,
       "first_watch_ms": 1794926400498,
       "watch_reset_ms": 1794926400498,
       "watch_high_price": 0.9168,
       "multi_day_hold": false,
-      "last_seen_ms": 1794937201503,
+      "last_seen_ms": 1794937801105,
       "last_ready_alert_ms": 0
     },
     "VELVETUSDT": {
@@ -58,14 +58,14 @@
       "watch_reset_ms": 1794937201503,
       "watch_high_price": 0.05333,
       "multi_day_hold": false,
-      "last_seen_ms": 1794937201503,
+      "last_seen_ms": 1794937801105,
       "last_ready_alert_ms": 0
     },
     "CROSSUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 58.0,
+      "timing": 50.0,
       "confidence": 46.0,
       "dump_score": 30,
       "price": 0.14947,
@@ -73,22 +73,22 @@
       "watch_reset_ms": 1794928200775,
       "watch_high_price": 0.15705,
       "multi_day_hold": false,
-      "last_seen_ms": 1794937201503,
+      "last_seen_ms": 1794937801105,
       "last_ready_alert_ms": 0
     },
     "SKYAIUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 68.0,
-      "confidence": 60.0,
+      "timing": 58.0,
+      "confidence": 52.0,
       "dump_score": 65,
       "price": 0.03829,
       "first_watch_ms": 1794928200775,
       "watch_reset_ms": 1794928200775,
       "watch_high_price": 0.03954,
       "multi_day_hold": true,
-      "last_seen_ms": 1794937201503,
+      "last_seen_ms": 1794937801105,
       "last_ready_alert_ms": 0
     }
   }
