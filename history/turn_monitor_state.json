@@ -1,34 +1,34 @@
 {
-  "updated_at_ms": 1794919200383,
+  "updated_at_ms": 1794919801228,
   "symbols": {
     "EVAAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
       "timing": 46.0,
-      "confidence": 16.0,
-      "dump_score": 30,
+      "confidence": 27.0,
+      "dump_score": 65,
       "price": 3.7532,
       "first_watch_ms": 1794903000617,
       "watch_reset_ms": 1794908400489,
       "watch_high_price": 4.173,
       "multi_day_hold": true,
-      "last_seen_ms": 1794919200383,
+      "last_seen_ms": 1794919801228,
       "last_ready_alert_ms": 0
     },
     "VVVUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 20.0,
-      "confidence": 9.0,
+      "timing": 30.0,
+      "confidence": 15.0,
       "dump_score": 30,
       "price": 21.531,
       "first_watch_ms": 1794903000617,
       "watch_reset_ms": 1794917400768,
       "watch_high_price": 21.785,
       "multi_day_hold": true,
-      "last_seen_ms": 1794919200383,
+      "last_seen_ms": 1794919801228,
       "last_ready_alert_ms": 0
     },
     "CROSSUSDT": {
@@ -36,14 +36,14 @@
       "lane": "RETEST",
       "ready": false,
       "timing": 58.0,
-      "confidence": 61.0,
+      "confidence": 67.0,
       "dump_score": 65,
       "price": 0.14777,
       "first_watch_ms": 1794904800403,
       "watch_reset_ms": 1794906601025,
       "watch_high_price": 0.14933,
       "multi_day_hold": false,
-      "last_seen_ms": 1794919200383,
+      "last_seen_ms": 1794919801228,
       "last_ready_alert_ms": 1794906601025
     },
     "PHAUSDT": {
@@ -58,7 +58,7 @@
       "watch_reset_ms": 1794919200383,
       "watch_high_price": 0.03398,
       "multi_day_hold": true,
-      "last_seen_ms": 1794919200383,
+      "last_seen_ms": 1794919801228,
       "last_ready_alert_ms": 0
     },
     "MUSDT": {
@@ -73,14 +73,14 @@
       "watch_reset_ms": 1794919200383,
       "watch_high_price": 0.9131,
       "multi_day_hold": false,
-      "last_seen_ms": 1794919200383,
+      "last_seen_ms": 1794919801228,
       "last_ready_alert_ms": 0
     },
     "PIEVERSEUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 62.0,
+      "timing": 72.0,
       "confidence": 67.0,
       "dump_score": 65,
       "price": 1.9842,
@@ -88,7 +88,7 @@
       "watch_reset_ms": 1794917400768,
       "watch_high_price": 2.0092,
       "multi_day_hold": false,
-      "last_seen_ms": 1794919200383,
+      "last_seen_ms": 1794919801228,
       "last_ready_alert_ms": 0
     }
   }
