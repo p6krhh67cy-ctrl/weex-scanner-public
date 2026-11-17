@@ -1,4 +1,35 @@
 {
-  "updated_at_ms": 1794901800986,
-  "symbols": {}
+  "updated_at_ms": 1794903000617,
+  "symbols": {
+    "EVAAUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 42.0,
+      "confidence": 24.0,
+      "dump_score": 30,
+      "price": 4.0347,
+      "first_watch_ms": 1794903000617,
+      "watch_reset_ms": 1794903000617,
+      "watch_high_price": 4.0347,
+      "multi_day_hold": true,
+      "last_seen_ms": 1794903000617,
+      "last_ready_alert_ms": 0
+    },
+    "VVVUSDT": {
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
+      "ready": false,
+      "timing": 42.0,
+      "confidence": 30.0,
+      "dump_score": 65,
+      "price": 21.457,
+      "first_watch_ms": 1794903000617,
+      "watch_reset_ms": 1794903000617,
+      "watch_high_price": 21.457,
+      "multi_day_hold": true,
+      "last_seen_ms": 1794903000617,
+      "last_ready_alert_ms": 0
+    }
+  }
 }
