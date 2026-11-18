@@ -1,19 +1,19 @@
 {
-  "updated_at_ms": 1794987600464,
+  "updated_at_ms": 1794988201080,
   "symbols": {
     "CROSSUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 56.0,
-      "confidence": 18.0,
+      "timing": 38.0,
+      "confidence": 12.0,
       "dump_score": 30,
       "price": 0.16139,
       "first_watch_ms": 1794987600464,
       "watch_reset_ms": 1794987600464,
       "watch_high_price": 0.16139,
       "multi_day_hold": true,
-      "last_seen_ms": 1794987600464,
+      "last_seen_ms": 1794988201080,
       "last_ready_alert_ms": 0
     }
   }
