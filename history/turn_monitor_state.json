@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1794991201124,
+  "updated_at_ms": 1794991800630,
   "symbols": {
     "VELVETUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -13,22 +13,22 @@
       "watch_reset_ms": 1794989400398,
       "watch_high_price": 0.05542,
       "multi_day_hold": false,
-      "last_seen_ms": 1794991201124,
+      "last_seen_ms": 1794991800630,
       "last_ready_alert_ms": 0
     },
     "SENTUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 68.0,
-      "confidence": 36.0,
+      "timing": 36.0,
+      "confidence": 4.0,
       "dump_score": 30,
       "price": 0.01917,
       "first_watch_ms": 1794989400398,
       "watch_reset_ms": 1794989400398,
       "watch_high_price": 0.01919,
       "multi_day_hold": true,
-      "last_seen_ms": 1794991201124,
+      "last_seen_ms": 1794991800630,
       "last_ready_alert_ms": 0
     },
     "CROSSUSDT": {
@@ -36,14 +36,14 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 46.0,
-      "confidence": 12.0,
+      "confidence": 28.0,
       "dump_score": 65,
       "price": 0.16399,
       "first_watch_ms": 1794987600464,
       "watch_reset_ms": 1794989400398,
       "watch_high_price": 0.16434,
       "multi_day_hold": true,
-      "last_seen_ms": 1794991201124,
+      "last_seen_ms": 1794991800630,
       "last_ready_alert_ms": 0
     }
   }
