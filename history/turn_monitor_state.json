@@ -1,5 +1,5 @@
 {
-  "updated_at_ms": 1795275600566,
+  "updated_at_ms": 1795276201333,
   "symbols": {
     "NESUSDT": {
       "cycle_state": "WATCH_PUMP",
@@ -13,7 +13,7 @@
       "watch_reset_ms": 1795275600566,
       "watch_high_price": 0.2964,
       "multi_day_hold": true,
-      "last_seen_ms": 1795275600566,
+      "last_seen_ms": 1795276201333,
       "last_ready_alert_ms": 0
     },
     "ONUSDT": {
@@ -28,7 +28,7 @@
       "watch_reset_ms": 1795275600566,
       "watch_high_price": 0.1117,
       "multi_day_hold": true,
-      "last_seen_ms": 1795275600566,
+      "last_seen_ms": 1795276201333,
       "last_ready_alert_ms": 0
     },
     "UVXYUSDT": {
@@ -43,37 +43,22 @@
       "watch_reset_ms": 1795264800617,
       "watch_high_price": 29.425,
       "multi_day_hold": true,
-      "last_seen_ms": 1795275600566,
+      "last_seen_ms": 1795276201333,
       "last_ready_alert_ms": 0
     },
     "NAORISUSDT": {
-      "cycle_state": "WATCH_RETEST",
-      "lane": "RETEST",
+      "cycle_state": "WATCH_PUMP",
+      "lane": "PUMP",
       "ready": false,
-      "timing": 76.0,
-      "confidence": 36.0,
+      "timing": 38.0,
+      "confidence": 10.0,
       "dump_score": 0,
       "price": 0.03357,
       "first_watch_ms": 1795263000683,
       "watch_reset_ms": 1795268400845,
       "watch_high_price": 0.03486,
-      "multi_day_hold": false,
-      "last_seen_ms": 1795275600566,
-      "last_ready_alert_ms": 0
-    },
-    "PIEVERSEUSDT": {
-      "cycle_state": "WATCH_RETEST",
-      "lane": "RETEST",
-      "ready": false,
-      "timing": 72.0,
-      "confidence": 66.0,
-      "dump_score": 65,
-      "price": 2.9806,
-      "first_watch_ms": 1795275600566,
-      "watch_reset_ms": 1795275600566,
-      "watch_high_price": 2.9806,
-      "multi_day_hold": false,
-      "last_seen_ms": 1795275600566,
+      "multi_day_hold": true,
+      "last_seen_ms": 1795276201333,
       "last_ready_alert_ms": 0
     },
     "FOLKSUSDT": {
@@ -81,36 +66,36 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 86.0,
-      "confidence": 76.0,
+      "confidence": 70.0,
       "dump_score": 65,
       "price": 2.39,
       "first_watch_ms": 1795257600498,
       "watch_reset_ms": 1795266600823,
       "watch_high_price": 2.507,
       "multi_day_hold": false,
-      "last_seen_ms": 1795275600566,
+      "last_seen_ms": 1795276201333,
       "last_ready_alert_ms": 0
     },
     "EVAAUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 66.0,
-      "confidence": 67.0,
+      "timing": 78.0,
+      "confidence": 63.0,
       "dump_score": 65,
       "price": 6.1371,
       "first_watch_ms": 1795263000683,
       "watch_reset_ms": 1795264800617,
       "watch_high_price": 6.2736,
       "multi_day_hold": false,
-      "last_seen_ms": 1795275600566,
+      "last_seen_ms": 1795276201333,
       "last_ready_alert_ms": 0
     },
     "ELSAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 52.0,
+      "timing": 60.0,
       "confidence": 58.0,
       "dump_score": 65,
       "price": 0.06641,
@@ -118,7 +103,7 @@
       "watch_reset_ms": 1795257600498,
       "watch_high_price": 0.06897,
       "multi_day_hold": true,
-      "last_seen_ms": 1795275600566,
+      "last_seen_ms": 1795276201333,
       "last_ready_alert_ms": 0
     }
   }
