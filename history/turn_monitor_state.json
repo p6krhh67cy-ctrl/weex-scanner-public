@@ -1,11 +1,11 @@
 {
-  "updated_at_ms": 1795351201095,
+  "updated_at_ms": 1795351800953,
   "symbols": {
     "NESUSDT": {
       "cycle_state": "WATCH_RETEST",
       "lane": "RETEST",
       "ready": false,
-      "timing": 58.0,
+      "timing": 66.0,
       "confidence": 48.0,
       "dump_score": 35,
       "price": 0.3022,
@@ -13,22 +13,22 @@
       "watch_reset_ms": 1795344001144,
       "watch_high_price": 0.3038,
       "multi_day_hold": false,
-      "last_seen_ms": 1795351201095,
+      "last_seen_ms": 1795351800953,
       "last_ready_alert_ms": 0
     },
     "ELSAUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
-      "confidence": 26.0,
-      "dump_score": 30,
+      "timing": 20.0,
+      "confidence": 0.0,
+      "dump_score": 0,
       "price": 0.08301,
       "first_watch_ms": 1795349400648,
       "watch_reset_ms": 1795351201095,
       "watch_high_price": 0.08301,
       "multi_day_hold": true,
-      "last_seen_ms": 1795351201095,
+      "last_seen_ms": 1795351800953,
       "last_ready_alert_ms": 0
     },
     "VELVETUSDT": {
@@ -43,7 +43,7 @@
       "watch_reset_ms": 1795344001144,
       "watch_high_price": 0.073,
       "multi_day_hold": true,
-      "last_seen_ms": 1795351201095,
+      "last_seen_ms": 1795351800953,
       "last_ready_alert_ms": 0
     },
     "ENSOUSDT": {
@@ -51,14 +51,14 @@
       "lane": "PUMP",
       "ready": false,
       "timing": 46.0,
-      "confidence": 74.0,
+      "confidence": 68.0,
       "dump_score": 65,
       "price": 0.4594,
       "first_watch_ms": 1795344001144,
       "watch_reset_ms": 1795344001144,
       "watch_high_price": 0.4948,
       "multi_day_hold": true,
-      "last_seen_ms": 1795351201095,
+      "last_seen_ms": 1795351800953,
       "last_ready_alert_ms": 0
     },
     "ONUSDT": {
@@ -73,7 +73,7 @@
       "watch_reset_ms": 1795344001144,
       "watch_high_price": 0.1169,
       "multi_day_hold": false,
-      "last_seen_ms": 1795351201095,
+      "last_seen_ms": 1795351800953,
       "last_ready_alert_ms": 0
     }
   }
