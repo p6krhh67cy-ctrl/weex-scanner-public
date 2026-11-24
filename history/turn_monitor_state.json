@@ -1,34 +1,19 @@
 {
-  "updated_at_ms": 1795534801213,
+  "updated_at_ms": 1795535400572,
   "symbols": {
     "BTWUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 42.0,
-      "confidence": 56.0,
+      "timing": 60.0,
+      "confidence": 64.0,
       "dump_score": 65,
       "price": 0.7325,
       "first_watch_ms": 1795507801182,
       "watch_reset_ms": 1795534801213,
       "watch_high_price": 0.7325,
       "multi_day_hold": true,
-      "last_seen_ms": 1795534801213,
-      "last_ready_alert_ms": 0
-    },
-    "BLESSUSDT": {
-      "cycle_state": "WATCH_PUMP",
-      "lane": "PUMP",
-      "ready": false,
-      "timing": 36.0,
-      "confidence": 21.0,
-      "dump_score": 35,
-      "price": 0.017953,
-      "first_watch_ms": 1795534801213,
-      "watch_reset_ms": 1795534801213,
-      "watch_high_price": 0.017953,
-      "multi_day_hold": false,
-      "last_seen_ms": 1795534801213,
+      "last_seen_ms": 1795535400572,
       "last_ready_alert_ms": 0
     },
     "VELVETUSDT": {
@@ -43,7 +28,7 @@
       "watch_reset_ms": 1795524000948,
       "watch_high_price": 0.07981,
       "multi_day_hold": true,
-      "last_seen_ms": 1795534801213,
+      "last_seen_ms": 1795535400572,
       "last_ready_alert_ms": 0
     },
     "DODOXUSDT": {
@@ -52,35 +37,35 @@
       "ready": false,
       "timing": 56.0,
       "confidence": 10.0,
-      "dump_score": 30,
+      "dump_score": 65,
       "price": 0.043421,
       "first_watch_ms": 1795534801213,
       "watch_reset_ms": 1795534801213,
       "watch_high_price": 0.043421,
       "multi_day_hold": true,
-      "last_seen_ms": 1795534801213,
+      "last_seen_ms": 1795535400572,
       "last_ready_alert_ms": 0
     },
     "KGENUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 38.0,
-      "confidence": 40.0,
+      "timing": 30.0,
+      "confidence": 32.0,
       "dump_score": 30,
       "price": 0.08998,
       "first_watch_ms": 1795531200520,
       "watch_reset_ms": 1795531200520,
       "watch_high_price": 0.09141,
       "multi_day_hold": true,
-      "last_seen_ms": 1795534801213,
+      "last_seen_ms": 1795535400572,
       "last_ready_alert_ms": 0
     },
     "BRUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 38.0,
+      "timing": 30.0,
       "confidence": 55.0,
       "dump_score": 65,
       "price": 0.4155,
@@ -88,14 +73,14 @@
       "watch_reset_ms": 1795533001202,
       "watch_high_price": 0.4209,
       "multi_day_hold": true,
-      "last_seen_ms": 1795534801213,
+      "last_seen_ms": 1795535400572,
       "last_ready_alert_ms": 0
     },
     "RESOLVUSDT": {
       "cycle_state": "WATCH_PUMP",
       "lane": "PUMP",
       "ready": false,
-      "timing": 68.0,
+      "timing": 60.0,
       "confidence": 59.0,
       "dump_score": 65,
       "price": 0.0138,
@@ -103,7 +88,7 @@
       "watch_reset_ms": 1795534801213,
       "watch_high_price": 0.0138,
       "multi_day_hold": false,
-      "last_seen_ms": 1795534801213,
+      "last_seen_ms": 1795535400572,
       "last_ready_alert_ms": 0
     },
     "EDUUSDT": {
@@ -118,7 +103,7 @@
       "watch_reset_ms": 1795533001202,
       "watch_high_price": 0.04798,
       "multi_day_hold": false,
-      "last_seen_ms": 1795534801213,
+      "last_seen_ms": 1795535400572,
       "last_ready_alert_ms": 0
     },
     "DGAIUSDT": {
@@ -126,14 +111,14 @@
       "lane": "PUMP",
       "ready": true,
       "timing": 86.0,
-      "confidence": 50.0,
+      "confidence": 56.0,
       "dump_score": 65,
       "price": 1.0787,
       "first_watch_ms": 1795507801182,
       "watch_reset_ms": 1795527600413,
       "watch_high_price": 1.0878,
       "multi_day_hold": true,
-      "last_seen_ms": 1795534801213,
+      "last_seen_ms": 1795535400572,
       "last_ready_alert_ms": 1795531800460
     },
     "NVDAUSDT": {
@@ -148,7 +133,7 @@
       "watch_reset_ms": 1795507801182,
       "watch_high_price": 163.63,
       "multi_day_hold": true,
-      "last_seen_ms": 1795534801213,
+      "last_seen_ms": 1795535400572,
       "last_ready_alert_ms": 0
     }
   }
